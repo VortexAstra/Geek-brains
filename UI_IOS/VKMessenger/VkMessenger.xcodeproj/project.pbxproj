@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		863293AA25910C8E0022F3A5 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863293A925910C8E0022F3A5 /* SecondController.swift */; };
+		8662AC882594BE110023EFFC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662AC872594BE110023EFFC /* ThirdViewController.swift */; };
+		8662AC8C2594D8140023EFFC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8662AC8B2594D8140023EFFC /* TabBarViewController.swift */; };
 		8668DF9D258DFA5A00A5A399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668DF9C258DFA5A00A5A399 /* AppDelegate.swift */; };
 		8668DF9F258DFA5A00A5A399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668DF9E258DFA5A00A5A399 /* SceneDelegate.swift */; };
 		8668DFA1258DFA5A00A5A399 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668DFA0258DFA5A00A5A399 /* LoginViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		863293A925910C8E0022F3A5 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		8662AC872594BE110023EFFC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		8662AC8B2594D8140023EFFC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		8668DF99258DFA5A00A5A399 /* VkMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8668DF9C258DFA5A00A5A399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8668DF9E258DFA5A00A5A399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,23 @@
 			path = SecondVC;
 			sourceTree = "<group>";
 		};
+		8662AC902594D87D0023EFFC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8662AC8B2594D8140023EFFC /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8662AC912594D8900023EFFC /* DelegateFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8668DF9C258DFA5A00A5A399 /* AppDelegate.swift */,
+				8668DF9E258DFA5A00A5A399 /* SceneDelegate.swift */,
+			);
+			path = DelegateFiles;
+			sourceTree = "<group>";
+		};
 		8668DF90258DFA5A00A5A399 = {
 			isa = PBXGroup;
 			children = (
@@ -74,11 +95,12 @@
 		8668DF9B258DFA5A00A5A399 /* VkMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				8662AC912594D8900023EFFC /* DelegateFiles */,
+				8662AC902594D87D0023EFFC /* TabBar */,
 				863293A725910C610022F3A5 /* SecondVC */,
-				8668DF9C258DFA5A00A5A399 /* AppDelegate.swift */,
-				8668DF9E258DFA5A00A5A399 /* SceneDelegate.swift */,
 				863293A625910C4B0022F3A5 /* LoginVC */,
 				8668DFA2258DFA5A00A5A399 /* Main.storyboard */,
+				8662AC872594BE110023EFFC /* ThirdViewController.swift */,
 				8668DFA5258DFA5C00A5A399 /* Assets.xcassets */,
 				8668DFA7258DFA5C00A5A399 /* LaunchScreen.storyboard */,
 				8668DFAA258DFA5C00A5A399 /* Info.plist */,
@@ -156,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8662AC8C2594D8140023EFFC /* TabBarViewController.swift in Sources */,
 				8668DFA1258DFA5A00A5A399 /* LoginViewController.swift in Sources */,
 				863293AA25910C8E0022F3A5 /* SecondController.swift in Sources */,
+				8662AC882594BE110023EFFC /* ThirdViewController.swift in Sources */,
 				8668DF9D258DFA5A00A5A399 /* AppDelegate.swift in Sources */,
 				8668DF9F258DFA5A00A5A399 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  weather
-//
-//  Created by Артем Устинов on 19.12.2020.
-//
-
 import UIKit
 
 @main
