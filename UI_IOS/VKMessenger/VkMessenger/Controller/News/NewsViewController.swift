@@ -24,8 +24,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? NewsTableViewCell{
-            cell.label?.text = "dsffsdf"
-            
+            cell.label?.text = "News"
             return cell
         }
         return UITableViewCell()
