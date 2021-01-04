@@ -1,13 +1,11 @@
 import UIKit
 
 private var cell = "CellForFriend"
-var group = Group(name: ["Pukabu"], description: ["Da ij"])
-var user = User(id: 1, friendImage: [UIImage.init(systemName: "heart.fill")!, UIImage.init(systemName: "moon.fill")!,
-    UIImage.init(systemName: "flame.fill")!],
-    friends: ["Nikita", "Leva", "Tima"], group: group)
 
+    
 class FriendTableViewController: UITableViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,31 +21,34 @@ class FriendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? FriendTableViewCell {
-            cell.nameOfFriend.text = user.friends[indexPath.row]
-            cell.imageFriend.image = user.friendImage[indexPath.row]
+            let count = user.friends[indexPath.row].photo.count
+            cell.nameOfFriend.text = user.friends[indexPath.row].name
+            cell.imageFriend.image = user.friends[indexPath.row].photo[count - 1]
             return cell
         }
         return UITableViewCell()
-  }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-            case 0:
-                PhotoCollectionViewController.image  = user.friendImage[indexPath.row]
-            case 1:
-                PhotoCollectionViewController.image  = user.friendImage[indexPath.row]
-            case 2:
-                PhotoCollectionViewController.image  = user.friendImage[indexPath.row]
-            default:
-                break
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PhotoCollection" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! PhotoCollectionViewController
+                let count = user.friends[indexPath.row].photo.count
+                controller.image = user.friends[indexPath.row].photo[count - 1]
+                controller.label = user.friends[indexPath.row].name
+
+            }
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "show_photo" else {
-//            return
-//        }
-//        guard let destination = segue.destination as? PhotoCollectionViewController else { return }
-//        destination.image = user.friends[indexPath.row]
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(130)
+    }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            user.friends.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }    
 }

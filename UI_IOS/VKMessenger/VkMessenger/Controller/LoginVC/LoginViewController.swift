@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
   }
   
   func checkUserData() -> Bool {
-    loginTextField.text == "A" && passwordTextField.text == "4"
+    loginTextField.text == "" && passwordTextField.text == ""
   }
   
   func showAlert(){

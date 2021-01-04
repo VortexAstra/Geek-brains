@@ -14,12 +14,13 @@ class GroupTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user.group.name.count
+        return user.group.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? GroupTableViewCell{
-            cell.nameOfGroup.text = user.group.name[indexPath.row]
+            cell.nameOfGroup.text = user.group[indexPath.row].name
+            cell.imageViewGroup.image =  user.group[indexPath.row].image 
             return cell
         }
         
@@ -30,16 +31,22 @@ class GroupTableViewController: UITableViewController {
         guard let tableVC = segue.source as? AllGroupTableViewController, let indexPath = tableVC.tableView.indexPathForSelectedRow else {
             return
         }
-        let newGroup = tableVC.allGroup.name[indexPath.row]
-        if user.group.name.contains(newGroup){return}
-        user.group.name.append(newGroup)
+        let newGroup = tableVC.allGroup[indexPath.row]
+        for index in user.group{
+            guard index.name != newGroup.name else {return}
+        }
+        user.group.append(newGroup)
         tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            user.group.name.remove(at: indexPath.row)
+            user.group.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(130)
     }
 }
