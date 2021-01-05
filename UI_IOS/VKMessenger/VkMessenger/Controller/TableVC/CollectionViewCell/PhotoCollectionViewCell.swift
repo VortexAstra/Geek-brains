@@ -1,11 +1,14 @@
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
+    var count = 0
+    
     @IBOutlet weak var labelPhoto: UILabel!
     @IBOutlet weak var imagePhoto: UIImageView!
-    
-    var count = 0
     @IBOutlet weak var countOfLike: UILabel!
+    
+    override class func awakeFromNib() {
+    }
     
     @IBAction func likeButton(_ sender: UIButton) {
         guard count < 1 else {
@@ -32,4 +35,5 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         imagePhoto.layer.shadowOffset = CGSize.zero
         imagePhoto.layer.shadowRadius = 30
     }
+    
 }
