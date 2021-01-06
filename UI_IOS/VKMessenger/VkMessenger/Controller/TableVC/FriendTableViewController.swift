@@ -8,6 +8,7 @@ class FriendTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,6 +25,7 @@ class FriendTableViewController: UITableViewController {
             let count = user.friends[indexPath.row].photo.count
             cell.nameOfFriend.text = user.friends[indexPath.row].name
             cell.imageFriend.image = user.friends[indexPath.row].photo[count - 1]
+            
             return cell
         }
         return UITableViewCell()
@@ -42,7 +44,7 @@ class FriendTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(130)
+        return CGFloat(95)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

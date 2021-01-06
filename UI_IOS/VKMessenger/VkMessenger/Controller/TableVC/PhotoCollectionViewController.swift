@@ -9,6 +9,7 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
@@ -32,6 +33,6 @@ class PhotoCollectionViewController: UICollectionViewController {
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300.0, height: 500.0)
+        return CGSize(width: 300.0, height: 180)
     }
 }

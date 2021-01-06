@@ -1,8 +1,8 @@
 import UIKit
 
 
-var friend = Friend(id: 1, name: "Nikita", photo: [UIImage.init(named: "5")!])
-var friend1 = Friend(id: 2, name: "Leva", photo: [UIImage.init(named: "4")!])
+var friend = Friend(id: 1, name: "Eva", photo: [UIImage.init(named: "6")!])
+var friend1 = Friend(id: 2, name: "Aikita", photo: [UIImage.init(named: "15")!])
 
 
 var group = Group(name: "Pika4u group", description: "asdasd", image: UIImage.init(named: "2")!)

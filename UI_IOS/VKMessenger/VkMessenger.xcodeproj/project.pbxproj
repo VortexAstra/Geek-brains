@@ -30,6 +30,7 @@
 		86ABD389259777B3009DD4C8 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ABD388259777B3009DD4C8 /* PhotoCollectionViewController.swift */; };
 		86ABD39725978CEE009DD4C8 /* AllGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ABD39625978CEE009DD4C8 /* AllGroupTableViewCell.swift */; };
 		86ABD39C25978D4F009DD4C8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ABD39B25978D4F009DD4C8 /* PhotoCollectionViewCell.swift */; };
+		86C38DF025A650EC0092B7AE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C38DEF25A650EC0092B7AE /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		86ABD388259777B3009DD4C8 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		86ABD39625978CEE009DD4C8 /* AllGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewCell.swift; sourceTree = "<group>"; };
 		86ABD39B25978D4F009DD4C8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		86C38DEF25A650EC0092B7AE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				8633DD7E259F672B0021CAC6 /* InitStruct.swift */,
+				86C38DEF25A650EC0092B7AE /* CustomImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				86ABD389259777B3009DD4C8 /* PhotoCollectionViewController.swift in Sources */,
 				8611ABC325979016001541A0 /* GroupTableViewCell.swift in Sources */,
 				8633DD83259F77570021CAC6 /* NewsTableViewCell.swift in Sources */,
+				86C38DF025A650EC0092B7AE /* CustomImageView.swift in Sources */,
 				8668DF9D258DFA5A00A5A399 /* AppDelegate.swift in Sources */,
 				86ABD37125975E4E009DD4C8 /* Group.swift in Sources */,
 				86ABD36E25975E45009DD4C8 /* User.swift in Sources */,
