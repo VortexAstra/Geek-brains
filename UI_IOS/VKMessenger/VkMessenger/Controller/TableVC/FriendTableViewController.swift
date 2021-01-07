@@ -22,9 +22,8 @@ class FriendTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? FriendTableViewCell {
-            let count = user.friends[indexPath.row].photo.count
             cell.nameOfFriend.text = user.friends[indexPath.row].name
-            cell.imageFriend.image = user.friends[indexPath.row].photo[count - 1]
+            cell.imageFriend.image = user.friends[indexPath.row].photo[0]
             
             return cell
         }
@@ -35,10 +34,7 @@ class FriendTableViewController: UITableViewController {
         if segue.identifier == "PhotoCollection" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = segue.destination as! PhotoCollectionViewController
-                let count = user.friends[indexPath.row].photo.count
-                controller.image = user.friends[indexPath.row].photo[count - 1]
-                controller.label = user.friends[indexPath.row].name
-
+                controller.image.append(contentsOf: user.friends[indexPath.row].photo)
             }
         }
     }

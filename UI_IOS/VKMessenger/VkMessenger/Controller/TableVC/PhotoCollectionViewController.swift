@@ -4,7 +4,7 @@ private let reuseIdentifier = "CellForPhoto"
 
 class PhotoCollectionViewController: UICollectionViewController {
 
-    var image: UIImage?
+    var image: [UIImage] = []
     var label: String?
 
     override func viewDidLoad() {
@@ -18,21 +18,22 @@ class PhotoCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return image.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell{
-            cell.imagePhoto.image = image
-            cell.labelPhoto.text = label
+            cell.imagePhoto.image = image[indexPath.row]
             return cell
         }
+        
         return UICollectionViewCell()
     }
 }
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300.0, height: 180)
+        return CGSize(width: 100, height: 180)
     }
 }
