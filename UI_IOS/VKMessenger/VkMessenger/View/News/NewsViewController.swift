@@ -12,7 +12,7 @@ class NewsViewController: UIViewController  {
     }
 }
 
-extension NewsViewController: UITableViewDataSource, UITableViewDelegate{
+extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10

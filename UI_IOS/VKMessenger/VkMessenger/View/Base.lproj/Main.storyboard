@@ -129,17 +129,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2qo-IM-J3B">
-                            <size key="itemSize" width="249" height="319"/>
+                            <size key="itemSize" width="212" height="213"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellForPhoto" id="p8T-gy-ibl" customClass="PhotoCollectionViewCell" customModule="VkMessenger" customModuleProvider="target">
-                                <rect key="frame" x="82.5" y="0.0" width="249" height="319"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="CellForPhoto" id="p8T-gy-ibl" customClass="PhotoCollectionViewCell" customModule="VkMessenger" customModuleProvider="target">
+                                <rect key="frame" x="101" y="0.0" width="212" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d4K-oM-xGu">
-                                    <rect key="frame" x="0.0" y="0.0" width="249" height="319"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="212" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="svU-E5-8b3">
@@ -186,7 +186,7 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <gestureRecognizers/>
-                                <size key="customSize" width="249" height="319"/>
+                                <size key="customSize" width="212" height="213"/>
                                 <connections>
                                     <outlet property="imagePhoto" destination="svU-E5-8b3" id="NzP-qe-Jjp"/>
                                     <outlet property="likeLabel" destination="Azt-wi-7AR" id="WPw-hc-UJ9"/>
@@ -362,9 +362,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="OTl-PA-byE">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellForFriend" rowHeight="97" id="UXc-ET-gM3" customClass="FriendTableViewCell" customModule="VkMessenger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="97"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXc-ET-gM3" id="Hmv-rN-w5i">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
@@ -439,8 +444,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="Enb-uG-Vbu"/>
+                    <connections>
+                        <outlet property="searchBar" destination="OTl-PA-byE" id="Uvt-5T-3zE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhX-3n-u3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zkr-CK-hcW">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="UkY-yt-mIU"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="7449.275362318841" y="-1227.4553571428571"/>
         </scene>

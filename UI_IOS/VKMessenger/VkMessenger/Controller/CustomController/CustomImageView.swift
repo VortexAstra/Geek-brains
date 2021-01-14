@@ -1,6 +1,7 @@
 import UIKit
 
 @IBDesignable extension UIImageView {
+    
     @IBInspectable var borderColor:UIColor? {
         set {
             layer.borderColor = newValue!.cgColor
@@ -14,6 +15,7 @@ import UIKit
             }
         }
     }
+    
     @IBInspectable var borderWidth:CGFloat {
         set {
             layer.borderWidth = newValue
@@ -22,6 +24,7 @@ import UIKit
             return layer.borderWidth
         }
     }
+    
     @IBInspectable var cornerRadius:CGFloat {
         set {
             layer.cornerRadius = newValue
@@ -31,6 +34,7 @@ import UIKit
             return layer.cornerRadius
         }
     }
+    
     @IBInspectable
         var shadowRadius: CGFloat {
             get {
@@ -41,6 +45,7 @@ import UIKit
                 layer.shadowRadius = newValue
             }
         }
+    
         @IBInspectable
         var shadowOffset : CGSize{
 
@@ -61,6 +66,7 @@ import UIKit
                 layer.shadowColor = newValue.cgColor
             }
         }
+    
         @IBInspectable
         var shadowOpacity : Float {
 
