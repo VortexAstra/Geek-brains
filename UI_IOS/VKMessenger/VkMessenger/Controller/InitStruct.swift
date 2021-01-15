@@ -4,6 +4,12 @@ import UIKit
 var friend = Friend(id: 1, name: "Eva", photo: [UIImage.init(named: "6")!, UIImage.init(named: "15")!])
 var friend1 = Friend(id: 2, name: "Artyom1", photo:
                         [UIImage.init(named: "15")!,
+                         UIImage.init(named: "6")!,
+                         UIImage.init(named: "6")!,
+                         UIImage.init(named: "6")!,
+                         UIImage.init(named: "6")!,
+                         UIImage.init(named: "6")!,
+                         UIImage.init(named: "6")!,
                          UIImage.init(named: "6")!])
 var friend2 = Friend(id: 3, name: "Timon", photo:
                         [UIImage.init(named: "15")!,

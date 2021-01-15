@@ -4,7 +4,6 @@ private var cell = "CellForFriend"
 var sections = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 
-
 class FriendTableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     var filterData: [String] = sections
@@ -75,11 +74,9 @@ class FriendTableViewController: UITableViewController, UISearchBarDelegate {
         if searchText == ""{
             filterData = sections
         }
-        
         for index in sections{
             if (index.lowercased().contains(searchText.lowercased())){
                 filterData.append(index)
-
             }
         }
         self.tableView.reloadData()
