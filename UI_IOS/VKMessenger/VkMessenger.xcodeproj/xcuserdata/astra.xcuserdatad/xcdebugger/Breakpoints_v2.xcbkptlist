@@ -164,5 +164,161 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1666A272-BF66-4B40-A848-F27A75D77CCF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VkMessenger/Controller/CustomController/LikeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "LikeView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1666A272-BF66-4B40-A848-F27A75D77CCF - 24fb4763365e363c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.getter : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "1666A272-BF66-4B40-A848-F27A75D77CCF - 3d24fc54fb08ee30"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.setter : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  uuid = "1666A272-BF66-4B40-A848-F27A75D77CCF - 44f2fe6364fc6ef7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.modify : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "1666A272-BF66-4B40-A848-F27A75D77CCF - f0809bdc82e7d830"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29524765-CB9D-4BA9-8D6F-CAB5CDF5DAEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VkMessenger/Controller/CustomController/LikeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "isLike"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "29524765-CB9D-4BA9-8D6F-CAB5CDF5DAEF - 24fb4763365e363c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.getter : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "29524765-CB9D-4BA9-8D6F-CAB5CDF5DAEF - 3d24fc54fb08ee30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.setter : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  uuid = "29524765-CB9D-4BA9-8D6F-CAB5CDF5DAEF - 44f2fe6364fc6ef7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.modify : Swift.Bool"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "29524765-CB9D-4BA9-8D6F-CAB5CDF5DAEF - f0809bdc82e7d830"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkMessenger.LikeView.isLike.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "VkMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/astra/Documents/geekBrains/Geek-brains/UI_IOS/VKMessenger/VkMessenger/Controller/CustomController/LikeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

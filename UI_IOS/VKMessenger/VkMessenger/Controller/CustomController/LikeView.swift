@@ -6,7 +6,8 @@ class LikeView: UIControl {
     private let likeImage = UIImage(named: "like")
     private let likeOffImage = UIImage(named: "likeoff")
     
-    @IBInspectable var isLike: Bool = false {
+    @IBInspectable
+    var isLike: Bool = false {
         didSet {
             imageView.tintColor = isLike ? likeColor : likeOffColor
             imageView.image = isLike ? likeImage : likeOffImage
@@ -14,21 +15,24 @@ class LikeView: UIControl {
         }
     }
     
-    @IBInspectable var countLike: Int = 0 {
+    @IBInspectable
+    var countLike: Int = 0 {
         didSet {
             label.text = "\(countLike)"
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var likeColor: UIColor = .red {
+    @IBInspectable
+    var likeColor: UIColor = .red {
         didSet {
             imageView.tintColor = isLike ? likeColor : likeOffColor
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var likeOffColor: UIColor = .black {
+    @IBInspectable
+    var likeOffColor: UIColor = .black {
         didSet {
             imageView.tintColor = isLike ? likeColor : likeOffColor
             setNeedsLayout()

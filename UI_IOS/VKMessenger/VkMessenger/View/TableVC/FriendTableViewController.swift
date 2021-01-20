@@ -77,6 +77,7 @@ class FriendTableViewController: UITableViewController, UISearchBarDelegate {
         for index in sections{
             if (index.lowercased().contains(searchText.lowercased())){
                 filterData.append(index)
+                print(filterData)
             }
         }
         self.tableView.reloadData()

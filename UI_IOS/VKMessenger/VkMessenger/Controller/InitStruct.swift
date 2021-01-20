@@ -55,7 +55,7 @@ var group5 = Group(name: "Sixth", description: "t", image: UIImage.init(systemNa
 
 
 var user = User(id: 1, name: "Ustinov Artyom",
-                image: [UIImage.init(named: "1")!],
+                image: [UIImage.init(named: "15")!],
                 friends: [friend, friend1, friend2, friend3, friend4, friend5,
                           friend6, friend7, friend8, friend9, friend10, friend11,
                           friend12],

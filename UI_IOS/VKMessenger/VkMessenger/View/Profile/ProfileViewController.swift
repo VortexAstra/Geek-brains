@@ -8,8 +8,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         userImage.image = user.image[0]
-        userImage.layer.cornerRadius = userImage.frame.size.width / 2
         userName.text = user.name
     }
 }
