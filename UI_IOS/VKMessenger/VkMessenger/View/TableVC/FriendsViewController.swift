@@ -4,7 +4,7 @@ private var cell = "CellForFriends"
 var sections = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 
-class FriendsViewController: UIViewController {
+class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -22,7 +22,7 @@ class FriendsViewController: UIViewController {
         charPicker.setupUi()
         
     }
-    
+        
     @IBAction func panGesturePicker(_ sender: UIGestureRecognizer) {
         let location = sender.location(in: charPicker)
         let coef = Int(charPicker.frame.height) / sections.count
@@ -72,9 +72,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate, UIS
                     tempArr.append(index)
                 }
             }
-            
             cell.nameOfFriend?.text = tempArr[indexPath.row].name
-            //photo[0] - Main Photo on screen table
             cell.imageFriend?.image = tempArr[indexPath.row].photo[0]
             
             return cell

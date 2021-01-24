@@ -1,6 +1,7 @@
 import UIKit
 
-@IBDesignable extension UIImageView {
+@IBDesignable
+extension UIImageView {
     
     @IBInspectable
     var borderColor: UIColor? {

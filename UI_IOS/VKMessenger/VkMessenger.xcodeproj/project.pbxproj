@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8611ABC325979016001541A0 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611ABC225979016001541A0 /* GroupTableViewCell.swift */; };
 		8611ABC725979107001541A0 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611ABC625979107001541A0 /* FriendTableViewCell.swift */; };
+		8627F36225BB2C360022D87E /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8627F36125BB2C360022D87E /* LoadViewController.swift */; };
 		86320FFA25B78AE40031354F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86320FF825B78AE40031354F /* NewsTableViewCell.swift */; };
 		86320FFB25B78AE40031354F /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86320FF925B78AE40031354F /* NewsTableViewCell.xib */; };
 		86320FFE25B78BE60031354F /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86320FFD25B78BE60031354F /* NewsTableViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		8611ABC225979016001541A0 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		8611ABC625979107001541A0 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		8627F36125BB2C360022D87E /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		86320FF825B78AE40031354F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		86320FF925B78AE40031354F /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		86320FFD25B78BE60031354F /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				8668DFA0258DFA5A00A5A399 /* LoginViewController.swift */,
+				8627F36125BB2C360022D87E /* LoadViewController.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				86ABD37D259771E8009DD4C8 /* GroupTableViewController.swift in Sources */,
 				8633DD9125A074A70021CAC6 /* ProfileViewController.swift in Sources */,
 				8633DD7B259F647D0021CAC6 /* News.swift in Sources */,
+				8627F36225BB2C360022D87E /* LoadViewController.swift in Sources */,
 				8662AC8C2594D8140023EFFC /* TabBarViewController.swift in Sources */,
 				8668DFA1258DFA5A00A5A399 /* LoginViewController.swift in Sources */,
 				86ABD38625977458009DD4C8 /* AllGroupTableViewController.swift in Sources */,

@@ -81,6 +81,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttonLike" destination="33g-Dv-zEv" id="wXh-mS-BSY"/>
                 <outlet property="imageNews" destination="zAo-VH-eOl" id="GwU-LJ-nyY"/>
                 <outlet property="labelNews" destination="SMy-PB-Oew" id="8K3-Ry-OUe"/>
                 <outlet property="likeLabel" destination="ZLt-on-nv8" id="KPD-4y-PRz"/>
