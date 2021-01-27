@@ -6,24 +6,9 @@ class LoadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIView.animate(withDuration: 5) {
-            self.buttonForNextScreen.alpha = 1
-            self.buttonForNextScreen.tintColor = .red
-        }
         drawRing()
-        
     }
     
-    @IBAction func goNextScreen(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-        let memberDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        self.navigationController?.pushViewController(memberDetailsViewController, animated:true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
-    }
-
     func drawRing() {
         
         let circlePath = createShape(differenceWidth: 150)
@@ -38,49 +23,37 @@ class LoadViewController: UIViewController {
         
         let shapeLayer2 = configCAShapeLayer(circlePath: circlePath2)
         view.layer.addSublayer(shapeLayer2)
-        
-        //        UIView.animateKeyframes(withDuration: 3,
-        //                                delay: 1,
-        //                                options: [.repeat],
-        //                                animations: {
-        //                                    UIView.addKeyframe(withRelativeStartTime: 0,
-        //                                                       relativeDuration: 0.25,
-        //                                                       animations: {
-        //                                                        shapeLayer.opacity = 0.4
-        //                                                       })
-        //                                    UIView.addKeyframe(withRelativeStartTime: 0.25,
-        //                                                       relativeDuration: 0.25,
-        //                                                       animations: {
-        //                                                        shapeLayer1.opacity = 0.6
-        //                                                       })
-        //                                    UIView.addKeyframe(withRelativeStartTime: 0.5,
-        //                                                       relativeDuration: 0.25,
-        //                                                       animations: {
-        //                                                        shapeLayer2.opacity = 0.7
-        //                                                       })
-        //                                },
-        //                                completion: {(_) in
-        //                                    print("DONE")})
-        //
-        
-        let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        animation.beginTime = CACurrentMediaTime() + 0.5
-        animation.fromValue = 0.6
-        animation.toValue = 0.3
-        animation.duration = 1
-        shapeLayer.add(animation, forKey: nil)
-        
-        animation.beginTime = CACurrentMediaTime() + 1
-        animation.fromValue = 0.6
-        animation.toValue = 0.5
-        animation.duration = 1
-        shapeLayer1.add(animation, forKey: nil)
-        
-        animation.beginTime = CACurrentMediaTime() + 1.5
-        animation.fromValue = 0.6
-        animation.toValue = 0.6
-        animation.duration = 1
-        shapeLayer2.add(animation, forKey: nil)
+        UIView.animateKeyframes(withDuration: 5, delay: 0.2, options: .repeat) {
+            UIView.addKeyframe(withRelativeStartTime: 2, relativeDuration: 0.2) {
+                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+                animation.beginTime = CACurrentMediaTime() + 1
+                animation.fromValue = 0.6
+                animation.toValue = 0.3
+                animation.duration = 1
+                shapeLayer.add(animation, forKey: nil)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 2, relativeDuration: 0.2) {
+                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+                animation.beginTime = CACurrentMediaTime() + 2
+                animation.fromValue = 0.6
+                animation.toValue = 0.3
+                animation.duration = 1
+                shapeLayer1.add(animation, forKey: nil)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 2, relativeDuration: 0.2) {
+                let animation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
+                animation.beginTime = CACurrentMediaTime() + 3
+                animation.fromValue = 0.6
+                animation.toValue = 0.3
+                animation.duration = 1
+                shapeLayer2.add(animation, forKey: nil)
+            }
+        } completion: { (_) in
+            sleep(5)
+            let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+            let memberDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.navigationController?.pushViewController(memberDetailsViewController, animated:true)
+        }
     }
     
     func createShape(differenceWidth: CGFloat) -> UIBezierPath {

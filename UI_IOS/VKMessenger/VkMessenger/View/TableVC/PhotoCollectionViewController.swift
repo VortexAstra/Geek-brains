@@ -3,10 +3,10 @@ import UIKit
 private let reuseIdentifier = "CellForPhoto"
 
 class PhotoCollectionViewController: UICollectionViewController {
-
+    
     var image: [UIImage] = []
     var label: String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,11 +16,11 @@ class PhotoCollectionViewController: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return image.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell{
@@ -30,6 +30,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         return UICollectionViewCell()
     }
+    
 }
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{

@@ -17,12 +17,22 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        searchBar.showsCancelButton = true
         
         charPicker.Chars = sections
         charPicker.setupUi()
         
     }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        print("1")
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
         
+        // Remove focus from the search bar.
+        searchBar.endEditing(true)
+    }
+    
     @IBAction func panGesturePicker(_ sender: UIGestureRecognizer) {
         let location = sender.location(in: charPicker)
         let coef = Int(charPicker.frame.height) / sections.count

@@ -15,6 +15,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
             likeControl.isLike = true
             likeControl.countLike += 1
         }
-        
     }
+    
 }
