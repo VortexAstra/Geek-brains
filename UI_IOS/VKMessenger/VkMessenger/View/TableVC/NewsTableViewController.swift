@@ -19,7 +19,6 @@ class NewsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath)
         if let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifer, for: indexPath) as? NewsTableViewCell{
             cell.labelNews.text = "NEWS with XIB cell"
             cell.imageNews?.image = UIImage.init(named: "3")

@@ -25,10 +25,8 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        print("1")
         searchBar.text = nil
         searchBar.showsCancelButton = false
-        
         // Remove focus from the search bar.
         searchBar.endEditing(true)
     }

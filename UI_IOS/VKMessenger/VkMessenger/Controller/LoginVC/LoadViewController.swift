@@ -76,4 +76,13 @@ class LoadViewController: UIViewController {
         temp.lineWidth = 3
         return temp
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
 }
+

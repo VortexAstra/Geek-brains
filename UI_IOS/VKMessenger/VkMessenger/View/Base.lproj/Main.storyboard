@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qrK-nb-U6D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -179,7 +179,7 @@
                                                     <real key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="40"/>
+                                                    <real key="value" value="30"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                     <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -216,7 +216,6 @@
                                 <connections>
                                     <outlet property="imagePhoto" destination="svU-E5-8b3" id="NzP-qe-Jjp"/>
                                     <outlet property="likeLabel" destination="Azt-wi-7AR" id="WPw-hc-UJ9"/>
-                                    <segue destination="7mN-O6-FOk" kind="show" identifier="ShowPhoto" id="gFw-Br-y5s"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -231,17 +230,33 @@
             </objects>
             <point key="canvasLocation" x="9410.144927536232" y="-1227.4553571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="mVU-Sa-FzT">
             <objects>
-                <viewController id="7mN-O6-FOk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7mN-O6-FOk" customClass="PhotoViewController" customModule="VkMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PXm-PP-adO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-0y-LT9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-0y-LT9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-Af-HcH">
+                                <rect key="frame" x="355" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="next:" destination="7mN-O6-FOk" eventType="touchUpInside" id="HhB-ue-YBv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Nk-myU">
+                                <rect key="frame" x="20" y="438" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prew"/>
+                                <connections>
+                                    <action selector="prev:" destination="7mN-O6-FOk" eventType="touchUpInside" id="pNU-dt-LO5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u17-L3-0On"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -253,10 +268,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cvC-dr-6iP"/>
+                    <connections>
+                        <outlet property="imageFriend" destination="Ep6-0y-LT9" id="78R-F1-Ymt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJv-qI-SeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10216" y="-1234"/>
+            <point key="canvasLocation" x="10215.942028985508" y="-1234.1517857142856"/>
         </scene>
         <!--Groups-->
         <scene sceneID="EwD-zU-hE8">
