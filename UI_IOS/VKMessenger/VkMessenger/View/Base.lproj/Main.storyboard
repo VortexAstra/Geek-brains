@@ -238,23 +238,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-0y-LT9">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-0y-LT9">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-Af-HcH">
-                                <rect key="frame" x="355" y="433" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-0x-1ze">
+                                <rect key="frame" x="344" y="433" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="next:" destination="7mN-O6-FOk" eventType="touchUpInside" id="HhB-ue-YBv"/>
+                                    <action selector="next:" destination="7mN-O6-FOk" eventType="touchUpInside" id="ogs-cb-JwK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Nk-myU">
-                                <rect key="frame" x="20" y="438" width="35" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im7-gI-Qa4">
+                                <rect key="frame" x="20" y="433" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prew"/>
+                                <state key="normal" title="Prev">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="prev:" destination="7mN-O6-FOk" eventType="touchUpInside" id="pNU-dt-LO5"/>
+                                    <action selector="prev:" destination="7mN-O6-FOk" eventType="touchUpInside" id="nGO-La-lBT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -647,7 +652,7 @@
         <!--Group-->
         <scene sceneID="vWH-Tq-Fho">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXg-2k-9YF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXg-2k-9YF" customClass="CustomNavigationViewController" customModule="VkMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Group" image="person.3.fill" catalog="system" id="eqS-RS-TLX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wYh-ZZ-phm">
@@ -685,7 +690,7 @@
         <!--News-->
         <scene sceneID="cap-GO-mTO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KjO-NS-fpq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KjO-NS-fpq" customClass="CustomNavigationViewController" customModule="VkMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="HVU-Wc-Ous"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h8S-m5-yhn">
@@ -704,7 +709,7 @@
         <!--Friends-->
         <scene sceneID="0MI-BW-1a5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qq-vt-vYv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Qq-vt-vYv" customClass="CustomNavigationViewController" customModule="VkMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="person.3" catalog="system" id="uNN-R3-fKn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Ug-0e-xic">
@@ -720,10 +725,10 @@
             </objects>
             <point key="canvasLocation" x="7447.826086956522" y="-1227.4553571428571"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation View Controller-->
         <scene sceneID="3eq-gX-8pU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrK-nb-U6D" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrK-nb-U6D" customClass="CustomNavigationViewController" customModule="VkMessenger" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0gU-eR-lWj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
