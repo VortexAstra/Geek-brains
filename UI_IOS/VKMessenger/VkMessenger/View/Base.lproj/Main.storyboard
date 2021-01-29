@@ -241,34 +241,46 @@
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-0y-LT9">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-0x-1ze">
-                                <rect key="frame" x="344" y="433" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="next:" destination="7mN-O6-FOk" eventType="touchUpInside" id="ogs-cb-JwK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im7-gI-Qa4">
-                                <rect key="frame" x="20" y="433" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="prev:" destination="7mN-O6-FOk" eventType="touchUpInside" id="nGO-La-lBT"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="321" translatesAutoresizingMaskIntoConstraints="NO" id="zhq-zn-wUQ">
+                                <rect key="frame" x="10" y="436" width="394" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im7-gI-Qa4">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="aju-aQ-dEV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" image="arrowshape.turn.up.backward.fill" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="prev:" destination="7mN-O6-FOk" eventType="touchUpInside" id="nGO-La-lBT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-0x-1ze">
+                                        <rect key="frame" x="354" y="0.0" width="40" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fIn-bA-g5T"/>
+                                        </constraints>
+                                        <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="next:" destination="7mN-O6-FOk" eventType="touchUpInside" id="ogs-cb-JwK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u17-L3-0On"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zhq-zn-wUQ" firstAttribute="leading" secondItem="u17-L3-0On" secondAttribute="leading" constant="10" id="2tc-o4-zZ2"/>
                             <constraint firstItem="Ep6-0y-LT9" firstAttribute="top" secondItem="u17-L3-0On" secondAttribute="top" id="FYA-VK-bh6"/>
                             <constraint firstItem="Ep6-0y-LT9" firstAttribute="leading" secondItem="u17-L3-0On" secondAttribute="leading" id="GTt-ev-YaT"/>
+                            <constraint firstItem="u17-L3-0On" firstAttribute="trailing" secondItem="zhq-zn-wUQ" secondAttribute="trailing" constant="10" id="MEa-LH-91Q"/>
                             <constraint firstItem="u17-L3-0On" firstAttribute="trailing" secondItem="Ep6-0y-LT9" secondAttribute="trailing" id="bbc-NH-R43"/>
+                            <constraint firstItem="zhq-zn-wUQ" firstAttribute="centerY" secondItem="PXm-PP-adO" secondAttribute="centerY" id="d5k-tU-17E"/>
                             <constraint firstItem="u17-L3-0On" firstAttribute="bottom" secondItem="Ep6-0y-LT9" secondAttribute="bottom" id="gA2-Wu-oeR"/>
                         </constraints>
                     </view>
@@ -749,6 +761,8 @@
         <segue reference="4CR-2Q-Nef"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

@@ -1,10 +1,3 @@
-//
-//  CustomPushAnimator.swift
-//  VkMessenger
-//
-//  Created by Артем Устинов on 28.01.2021.
-//
-
 import UIKit
 
 final class CustomPushAnimator: NSObject, UIViewControllerAnimatedTransitioning{

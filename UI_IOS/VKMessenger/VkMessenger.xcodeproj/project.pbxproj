@@ -40,6 +40,7 @@
 		86FDC77D25C3059F00D6089B /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDC77C25C3059F00D6089B /* CustomNavigationViewController.swift */; };
 		86FDC78125C3066200D6089B /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDC78025C3066200D6089B /* CustomPushAnimator.swift */; };
 		86FDC78725C3505F00D6089B /* CustomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDC78625C3505F00D6089B /* CustomPopAnimator.swift */; };
+		86FDC78A25C4125300D6089B /* MyInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FDC78925C4125200D6089B /* MyInteractiveTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		86FDC77C25C3059F00D6089B /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		86FDC78025C3066200D6089B /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
 		86FDC78625C3505F00D6089B /* CustomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopAnimator.swift; sourceTree = "<group>"; };
+		86FDC78925C4125200D6089B /* MyInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInteractiveTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 			children = (
 				86FDC78425C3067500D6089B /* CustomView */,
 				86FDC78325C3066C00D6089B /* initStruct */,
+				86FDC78925C4125200D6089B /* MyInteractiveTransition.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				86F48DF425A79BB900268CC1 /* LikeView.swift in Sources */,
 				86C38DF025A650EC0092B7AE /* CustomImageView.swift in Sources */,
 				8668DF9D258DFA5A00A5A399 /* AppDelegate.swift in Sources */,
+				86FDC78A25C4125300D6089B /* MyInteractiveTransition.swift in Sources */,
 				86320FFA25B78AE40031354F /* NewsTableViewCell.swift in Sources */,
 				86ABD37125975E4E009DD4C8 /* Group.swift in Sources */,
 				86ABD36E25975E45009DD4C8 /* User.swift in Sources */,
