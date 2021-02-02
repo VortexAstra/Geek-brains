@@ -44,7 +44,12 @@ class LoginViewController: UIViewController {
     
   }
   
-  func checkUserData() -> Bool {
+    @IBAction func SignUpButton(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController")
+        present(vc, animated: true, completion: nil)
+    }
+    func checkUserData() -> Bool {
     loginTextField.text == "" && passwordTextField.text == ""
   }
   
