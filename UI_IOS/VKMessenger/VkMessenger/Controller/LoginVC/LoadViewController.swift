@@ -19,7 +19,7 @@ class LoadViewController: UIViewController {
     func progressBarAnimation() {
         
         UIView.animate(withDuration: 0.5, delay: 0.3, options: [.repeat, .autoreverse]) {
-            self.loadingProgressBar.shape.alpha = 1
+            self.loadingProgressBar.shape1.alpha = 1
         }
         
         UIView.animate(withDuration: 0.5, delay: 0.6, options: [.repeat, .autoreverse]) {

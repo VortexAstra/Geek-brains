@@ -2,7 +2,7 @@ import UIKit
 
 class ProgressItem: UIView {
 
-    let shape = UIView(frame: CGRect(x: 123, y: 380, width: 50, height: 50))
+    let shape1 = UIView(frame: CGRect(x: 123, y: 380, width: 50, height: 50))
     let shape2 = UIView(frame: CGRect(x: 183, y: 380, width: 50, height: 50))
     let shape3 = UIView(frame: CGRect(x: 243, y: 380, width: 50, height: 50))
     
@@ -10,13 +10,13 @@ class ProgressItem: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(shape)
+        self.addSubview(shape1)
         self.addSubview(shape2)
         self.addSubview(shape3)
         
         self.backgroundColor = UIColor.lightGray
         
-        setUpView(for: shape)
+        setUpView(for: shape1)
         setUpView(for: shape2)
         setUpView(for: shape3)
     }
