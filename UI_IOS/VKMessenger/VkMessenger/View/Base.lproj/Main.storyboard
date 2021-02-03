@@ -260,7 +260,7 @@
                                             <constraint firstAttribute="width" constant="30" id="aju-aQ-dEV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" image="arrowshape.turn.up.backward.fill" catalog="system">
+                                        <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
@@ -272,7 +272,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="fIn-bA-g5T"/>
                                         </constraints>
-                                        <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system">
+                                        <state key="normal" image="arrowshape.turn.up.forward.fill" catalog="system">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
@@ -827,8 +827,8 @@
         <segue reference="4CR-2Q-Nef"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

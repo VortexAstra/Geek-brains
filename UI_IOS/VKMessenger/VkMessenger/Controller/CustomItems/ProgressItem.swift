@@ -2,23 +2,23 @@ import UIKit
 
 class ProgressItem: UIView {
 
-    let bar1 = UIView(frame: CGRect(x: 123, y: 380, width: 50, height: 50))
-    let bar2 = UIView(frame: CGRect(x: 183, y: 380, width: 50, height: 50))
-    let bar3 = UIView(frame: CGRect(x: 243, y: 380, width: 50, height: 50))
+    let shape = UIView(frame: CGRect(x: 123, y: 380, width: 50, height: 50))
+    let shape2 = UIView(frame: CGRect(x: 183, y: 380, width: 50, height: 50))
+    let shape3 = UIView(frame: CGRect(x: 243, y: 380, width: 50, height: 50))
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(bar1)
-        self.addSubview(bar2)
-        self.addSubview(bar3)
+        self.addSubview(shape)
+        self.addSubview(shape2)
+        self.addSubview(shape3)
         
         self.backgroundColor = UIColor.lightGray
         
-        setUpView(for: bar1)
-        setUpView(for: bar2)
-        setUpView(for: bar3)
+        setUpView(for: shape)
+        setUpView(for: shape2)
+        setUpView(for: shape3)
     }
     
     required init?(coder: NSCoder) {

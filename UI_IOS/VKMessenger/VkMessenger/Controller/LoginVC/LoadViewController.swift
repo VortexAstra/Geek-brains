@@ -8,8 +8,10 @@ class LoadViewController: UIViewController {
         super.viewDidLoad()
         self.view.addSubview(loadingProgressBar)
         
-        loadingProgressBar.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
-        loadingProgressBar.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
+        loadingProgressBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        loadingProgressBar.shape2.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
+        loadingProgressBar.shape2.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
         
         progressBarAnimation()
     }
@@ -17,15 +19,15 @@ class LoadViewController: UIViewController {
     func progressBarAnimation() {
         
         UIView.animate(withDuration: 0.5, delay: 0.3, options: [.repeat, .autoreverse]) {
-            self.loadingProgressBar.bar1.alpha = 1
+            self.loadingProgressBar.shape.alpha = 1
         }
         
         UIView.animate(withDuration: 0.5, delay: 0.6, options: [.repeat, .autoreverse]) {
-            self.loadingProgressBar.bar2.alpha = 1
+            self.loadingProgressBar.shape2.alpha = 1
         }
         
         UIView.animate(withDuration: 0.5, delay: 0.9, options: [.repeat, .autoreverse]) {
-            self.loadingProgressBar.bar3.alpha = 1
+            self.loadingProgressBar.shape3.alpha = 1
         }
         
     }
