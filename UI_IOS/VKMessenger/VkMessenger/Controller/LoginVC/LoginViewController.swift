@@ -30,7 +30,12 @@ class LoginViewController: UIViewController {
     return false
   }
   
-  override func viewWillAppear(_ animated: Bool) {
+    @IBAction func tapOnMainScreen(_ sender: Any) {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(true)
     navigationController?.setNavigationBarHidden(true, animated: animated)
   }

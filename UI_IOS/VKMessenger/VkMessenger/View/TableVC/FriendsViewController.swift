@@ -24,11 +24,12 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.text = nil
-        searchBar.showsCancelButton = false
+//        searchBar.showsCancelButton = false
         // Remove focus from the search bar.
-        searchBar.endEditing(true)
+//        searchBar.endEditing(true)
     }
     
     @IBAction func panGesturePicker(_ sender: UIGestureRecognizer) {
@@ -80,6 +81,24 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate, UIS
                     tempArr.append(index)
                 }
             }
+            cell.nameOfFriend.alpha = 0
+            cell.imageFriend.alpha = 0
+            cell.imageFriend.transform = CGAffineTransform(translationX: self.view.bounds.width / 2,
+                                                           y: 0)
+            UIView.animate(withDuration: 2,
+                           delay: 0.5,
+                              usingSpringWithDamping: 0.6,
+                              initialSpringVelocity: 0,
+                              options: .curveEaseOut,
+                              animations: {
+                                cell.imageFriend.transform = .identity
+                              },
+                              completion: nil)
+            UIView.animate(withDuration: 2) {
+                cell.imageFriend.alpha = 1
+                cell.nameOfFriend.alpha = 1
+            }
+
             cell.nameOfFriend?.text = tempArr[indexPath.row].name
             cell.imageFriend?.image = tempArr[indexPath.row].photo[0]
             
