@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		51C59137DD37D65742093D48 /* Pods_VkMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8688368D2F5FEC2F998688D9 /* Pods_VkMessenger.framework */; };
+		8610CC7925D7E4EA00D2C794 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610CC7825D7E4EA00D2C794 /* Friends.swift */; };
+		8610CC7D25D7E77300D2C794 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8610CC7C25D7E77300D2C794 /* Groups.swift */; };
 		8611ABC325979016001541A0 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611ABC225979016001541A0 /* GroupTableViewCell.swift */; };
 		8611ABC725979107001541A0 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611ABC625979107001541A0 /* FriendTableViewCell.swift */; };
 		8627F36225BB2C360022D87E /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8627F36125BB2C360022D87E /* LoadViewController.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		2093E6AB30EDB9CBD8A31D56 /* Pods-VkMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkMessenger.debug.xcconfig"; path = "Target Support Files/Pods-VkMessenger/Pods-VkMessenger.debug.xcconfig"; sourceTree = "<group>"; };
+		8610CC7825D7E4EA00D2C794 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		8610CC7C25D7E77300D2C794 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		8611ABC225979016001541A0 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		8611ABC625979107001541A0 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		8627F36125BB2C360022D87E /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +116,6 @@
 				2093E6AB30EDB9CBD8A31D56 /* Pods-VkMessenger.debug.xcconfig */,
 				A1E3DFBAFB89C2BA41067582 /* Pods-VkMessenger.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,6 +125,15 @@
 				8688368D2F5FEC2F998688D9 /* Pods_VkMessenger.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8610CC7725D7E4D100D2C794 /* Vk_response_modals */ = {
+			isa = PBXGroup;
+			children = (
+				8610CC7825D7E4EA00D2C794 /* Friends.swift */,
+				8610CC7C25D7E77300D2C794 /* Groups.swift */,
+			);
+			path = Vk_response_modals;
 			sourceTree = "<group>";
 		};
 		86320FF025B781130031354F /* Cell */ = {
@@ -275,6 +287,7 @@
 		86ABD36525969199009DD4C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8610CC7725D7E4D100D2C794 /* Vk_response_modals */,
 				8633DD72259F638D0021CAC6 /* User */,
 				8633DD75259F63A50021CAC6 /* Group */,
 				8633DD74259F63A00021CAC6 /* News */,
@@ -487,6 +500,7 @@
 				865DB58725D51F8D003FECC7 /* VKLoginViewController.swift in Sources */,
 				86FDC78125C3066200D6089B /* CustomPushAnimator.swift in Sources */,
 				8668DFA1258DFA5A00A5A399 /* LoginViewController.swift in Sources */,
+				8610CC7925D7E4EA00D2C794 /* Friends.swift in Sources */,
 				86ABD38625977458009DD4C8 /* AllGroupTableViewController.swift in Sources */,
 				86ABD389259777B3009DD4C8 /* PhotoCollectionViewController.swift in Sources */,
 				8611ABC325979016001541A0 /* GroupTableViewCell.swift in Sources */,
@@ -513,6 +527,7 @@
 				8611ABC725979107001541A0 /* FriendTableViewCell.swift in Sources */,
 				86FDC77D25C3059F00D6089B /* CustomNavigationViewController.swift in Sources */,
 				869D012325C1EB0A005AEF4F /* PhotoViewController.swift in Sources */,
+				8610CC7D25D7E77300D2C794 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

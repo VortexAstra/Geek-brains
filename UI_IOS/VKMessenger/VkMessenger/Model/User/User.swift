@@ -1,6 +1,6 @@
 import UIKit
 
-struct User {
+struct User{
     var id: Int
     var name: String
     var image: [UIImage]

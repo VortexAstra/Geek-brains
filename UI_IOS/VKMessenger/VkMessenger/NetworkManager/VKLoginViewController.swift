@@ -30,7 +30,6 @@ class VKLoginViewController: UIViewController {
         guard let url = components.url else {return}
         let request = URLRequest(url: url)
         webView.load(request)
-
     }
     
 
@@ -68,8 +67,9 @@ extension VKLoginViewController: WKNavigationDelegate {
         
         NetworkManager.shared.token = token
         
-        NetworkManager.loadInfo(for: "friends", token: token)
-        NetworkManager.loadInfo(for: "groups", token: token)
+
+//        NetworkManager.loadInfoByGroups(token: token)
+        NetworkManager.loadInfoByFriends(token: token)
         decisionHandler(.cancel)
     }
 }
