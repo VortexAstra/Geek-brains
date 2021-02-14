@@ -68,7 +68,7 @@ extension VKLoginViewController: WKNavigationDelegate {
         NetworkManager.shared.token = token
         
 
-//        NetworkManager.loadInfoByGroups(token: token)
+        NetworkManager.loadInfoByGroups(token: token)
         NetworkManager.loadInfoByFriends(token: token)
         decisionHandler(.cancel)
     }
