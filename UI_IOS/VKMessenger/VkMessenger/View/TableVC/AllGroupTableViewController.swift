@@ -4,7 +4,7 @@ private var cell = "CellForAllGroup"
 
 class AllGroupTableViewController: UITableViewController {
     
-    var allGroup = [group, group1, group3, group4, group5]
+//    var allGroup = [group, group1, group3, group4, group5]
     
     
     override func viewDidLoad() {
@@ -16,14 +16,14 @@ class AllGroupTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allGroup.count
+        return 10
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? AllGroupTableViewCell{
-            cell.groupName.text = allGroup[indexPath.row].name
-            cell.groupImage.image = allGroup[indexPath.row].image
+//            cell.groupName.text = allGroup[indexPath.row].name
+//            cell.groupImage.image = allGroup[indexPath.row].image
             return cell
         }
         return UITableViewCell()

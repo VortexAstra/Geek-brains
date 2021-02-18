@@ -4,7 +4,7 @@ import Alamofire
 import SwiftyJSON
 
 class VKLoginViewController: UIViewController {
-
+    
     @IBOutlet weak var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
@@ -37,9 +37,11 @@ class VKLoginViewController: UIViewController {
 
 extension VKLoginViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-        guard let url = navigationResponse.response.url,
-              url.path == "/blank.html",
-              let fragment = url.fragment else {
+        guard
+            let url = navigationResponse.response.url,
+            url.path == "/blank.html",
+            let fragment = url.fragment
+        else {
             decisionHandler(.allow)
             return
         }
@@ -58,18 +60,19 @@ extension VKLoginViewController: WKNavigationDelegate {
         
         print(params)
         
-        guard let token = params["access_token"],
-              let userIdString = params["user_id"],
-              let _ = Int(userIdString) else {
+        guard
+            let token = params["access_token"],
+            let userIdString = params["user_id"],
+            let _ = Int(userIdString)
+        else {
             decisionHandler(.allow)
             return
         }
         
-        NetworkManager.shared.token = token
-        
+        Session.shared.userId = Int(userIdString) ?? 0 // save received userId to the Session singleton
+        Session.shared.token = token // save received token to the Session singleton
 
-//        NetworkManager.loadInfoByGroups(token: token)
-        NetworkManager.loadInfoByFriends(token: token)
+        performSegue(withIdentifier: "to_login", sender: nil)
         decisionHandler(.cancel)
     }
 }

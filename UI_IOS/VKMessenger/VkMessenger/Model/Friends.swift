@@ -1,7 +1,7 @@
 import UIKit
 
- 
-struct Welcome: Codable {
+// MARK: - Friends
+struct Friends: Codable {
     let response: Response
 }
 
@@ -13,27 +13,20 @@ struct Response: Codable {
 
 // MARK: - Item
 struct Item: Codable {
-    let id: Double
-    let firstName, lastName: String
-    let isClosed, canAccessClosed: Bool
-    let domain: String
-    let city: City?
-    let online: Int
+    let firstName: String
+    let id: Int
+    let lastName: String
+    let canAccessClosed, isClosed: Bool
+    let photo50: String
     let trackCode: String
 
     enum CodingKeys: String, CodingKey {
-        case id
         case firstName = "first_name"
+        case id
         case lastName = "last_name"
-        case isClosed = "is_closed"
         case canAccessClosed = "can_access_closed"
-        case domain, city, online
+        case isClosed = "is_closed"
+        case photo50 = "photo_50"
         case trackCode = "track_code"
     }
-}
-
-// MARK: - City
-struct City: Codable {
-    let id: Int
-    let title: String
 }

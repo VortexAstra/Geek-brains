@@ -15,8 +15,5 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userImage.image = user.image[0]
-        userName.text = user.name
     }
 }
