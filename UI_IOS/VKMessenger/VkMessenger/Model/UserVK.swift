@@ -1,12 +1,12 @@
 import RealmSwift
 import SwiftyJSON
 
-struct User {
+class User: Object {
 
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let photo100: String
+    @objc dynamic var id: Int = 0
+    @objc dynamic var firstName: String = ""
+    @objc dynamic var lastName: String = ""
+    @objc dynamic var photo100: String = ""
     
     init(_ json: JSON) {
         self.id = json["id"].intValue
@@ -14,4 +14,9 @@ struct User {
         self.lastName = json["last_name"].stringValue
         self.photo100 = json["photo_200"].stringValue
     }
+    
+    override init() {
+        super.init()
+    }
+    
 }
