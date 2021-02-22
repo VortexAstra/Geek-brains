@@ -10,12 +10,14 @@ class GroupTableViewCell: UITableViewCell {
             self.imageViewGroup.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         imageViewGroup.isUserInteractionEnabled = true
         imageViewGroup.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:))))
     }
+    
     func config(with group: Group) {
         self.nameOfGroup.text = group.name
         let url = URL(string: group.photo100)

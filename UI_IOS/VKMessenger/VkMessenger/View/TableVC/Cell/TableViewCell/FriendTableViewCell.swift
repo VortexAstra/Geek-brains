@@ -30,4 +30,8 @@ class FriendTableViewCell: UITableViewCell {
         }
     
     
+    override func prepareForReuse() {
+        self.nameOfFriend.text = ""
+        self.imageFriend.image = UIImage(named: "")
+    }
 }

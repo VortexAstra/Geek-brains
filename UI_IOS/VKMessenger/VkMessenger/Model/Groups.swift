@@ -1,5 +1,6 @@
-import Alamofire
+import RealmSwift
 import SwiftyJSON
+
 
 struct Group {
     
@@ -14,4 +15,3 @@ struct Group {
     }
 }
 
-extension Group: Equatable {}

@@ -25,7 +25,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
             tableView.reloadData()
         }
     }
-
+    
     
     private func fillFriendsDict() {
         for user in self.filteredFriends {
@@ -51,16 +51,14 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate {
         searchBar.delegate = self
         searchBar.showsCancelButton = true
         
-        //        self.filteredFriends = self.friends
+        self.filteredFriends = self.friends
         tableView.register(FriendsHeader.self, forHeaderFooterViewReuseIdentifier: "FriendsHeader")
+        tableView.rowHeight = 125
         
         let networkService = NetworkManager()
         networkService.loadFriends() { [weak self] friends in
             self?.friends = friends
         }
-
-        charPicker.setupUi()
-        
     }
 }
 
@@ -69,9 +67,9 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard
             let sectionHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "FriendsHeader") as? FriendsHeader else { return nil }
-                
+        
         sectionHeader.textLabel?.text = String(self.firstLetters[section])
-        sectionHeader.contentView.backgroundColor = .gray
+        sectionHeader.contentView.backgroundColor = .systemBlue
         return sectionHeader
     }
     
@@ -81,6 +79,9 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.friendsDict[self.firstLetters[section]]?.count ?? 0
+    }
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        self.firstLetters.map{String($0)}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,13 +114,9 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(125)
-    }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            
+            filteredFriends.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -129,7 +126,12 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
 //    MARK: Search Bar
 extension FriendsViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        if (searchText.isEmpty){
+            self.filteredFriends = self.friends
+            tableView.reloadData()
+            return
+        }
+        self.filteredFriends = self.friends.filter { $0.firstName.lowercased().contains(searchText.lowercased()) }
         self.tableView.reloadData()
     }
 }
@@ -138,11 +140,17 @@ extension FriendsViewController: UISearchBarDelegate{
 //  MARK: Segue
 extension FriendsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PhotoCollection" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let controller = segue.destination as! PhotoCollectionViewController
-                //                controller.image.append(contentsOf: user.friends[indexPath.row].photo)
-//            }
+        guard
+            segue.identifier == "PhotoCollection",
+            let controller = segue.destination as? PhotoCollectionViewController,
+            let indexPath = tableView.indexPathForSelectedRow
+        else { return }
+        
+        let firstLetter = self.firstLetters[indexPath.section]
+        
+        if let users = self.friendsDict[firstLetter] {
+            let user = users[indexPath.row]
+            controller.user = user
         }
     }
 }

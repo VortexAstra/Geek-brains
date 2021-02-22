@@ -1,9 +1,6 @@
 import UIKit
-import Alamofire
-import SwiftyJSON
-
 import Foundation
-import  Alamofire
+import Alamofire
 import SwiftyJSON
 
 class NetworkManager {
@@ -38,7 +35,6 @@ class NetworkManager {
     }
     
     //MARK:- Load Friends Photos
-    
     func loadPhotos(for userId: Int, completion: @escaping ([Photo]) -> Void) {
         let path = "/method/photos.getAll"
         
@@ -66,7 +62,6 @@ class NetworkManager {
     }
     
     //MARK:- Load Groups
-    
     func loadGroups(completion: @escaping ([Group]) -> Void) {
         let path = "/method/groups.get"
         
@@ -82,6 +77,7 @@ class NetworkManager {
             .responseData { response in
                 switch response.result {
                 case .success(let data):
+                    print(data)
                     let json = JSON(data)
                     let groupJSONs = json["response"]["items"].arrayValue
                     let groups = groupJSONs.compactMap { Group($0) }
@@ -112,5 +108,4 @@ class NetworkManager {
                 print("Global Groups: ", json)
             }
     }
-    
 }

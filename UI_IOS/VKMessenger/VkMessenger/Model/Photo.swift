@@ -1,6 +1,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 struct Photo {
     let id: Int
@@ -8,7 +9,7 @@ struct Photo {
     
     init(_ json: JSON) {
         self.id = json["id"].intValue
-        self.sizes = json["sizes"].arrayValue.compactMap{ PhotoSize($0) } //Функция compactMap удаляет значения nil  из массива, тип возвращаемого значения больше не является опциональным
+        self.sizes = json["sizes"].arrayValue.compactMap{PhotoSize($0)}
     }
 }
 

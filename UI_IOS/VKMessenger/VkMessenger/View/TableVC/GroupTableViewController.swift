@@ -34,9 +34,6 @@ class GroupTableViewController: UITableViewController {
         return self.filteredGroups.count
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cell, for: indexPath) as? GroupTableViewCell{
@@ -58,10 +55,10 @@ class GroupTableViewController: UITableViewController {
                 cell.imageViewGroup.alpha = 1
                 cell.nameOfGroup.alpha = 1
             }
-
-                
-                let group = self.filteredGroups[indexPath.row]
-                cell.config(with: group)
+            
+            
+            let group = self.filteredGroups[indexPath.row]
+            cell.config(with: group)
             
             return cell
             

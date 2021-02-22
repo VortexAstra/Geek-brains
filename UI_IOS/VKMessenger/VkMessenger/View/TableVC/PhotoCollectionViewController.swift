@@ -4,40 +4,48 @@ private let reuseIdentifier = "CellForPhoto"
 
 class PhotoCollectionViewController: UICollectionViewController {
     
-    var image: [UIImage] = []
-    var label: String?
+    var user: User?
+    
+    var userImages = [String]() {
+        didSet{
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let networkService = NetworkManager()
+        
+        if let userId = self.user?.id {
+            networkService.loadPhotos(for: userId) { [weak self] photos in
+                self?.userImages = photos.compactMap { $0.sizes[$0.sizes.count - 1].url }
+            }
+        }
     }
-    
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
+        
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return image.count
+        return self.userImages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell{
-            cell.imagePhoto.image = image[indexPath.row]
+            let img = self.userImages[indexPath.row]
+            cell.configure(with: img)
             return cell
         }
         
         return UICollectionViewCell()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyBoard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else {return}
-        vc.indexPathPhoto = indexPath.row
-        vc.tempArray = image
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let vc = storyBoard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else {return}
+//        vc.indexPathPhoto = indexPath.row
+//        vc.tempArray = image
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{
