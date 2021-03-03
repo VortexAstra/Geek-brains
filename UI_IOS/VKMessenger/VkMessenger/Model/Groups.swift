@@ -14,9 +14,9 @@ class Group: Object {
         self.photo100 = json["photo_100"].stringValue
     }
     
-    override init() {
-        super.init()
+    override class func primaryKey() -> String? {
+        return "id"
     }
-    
+    override init() {}
 }
 

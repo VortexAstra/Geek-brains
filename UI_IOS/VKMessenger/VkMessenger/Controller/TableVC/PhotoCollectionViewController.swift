@@ -19,7 +19,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         if let userId = self.user?.id {
             networkService.loadPhotos(for: userId) { [weak self] photos in
-                self?.userImages = photos.compactMap { $0.sizes[$0.sizes.count - 1].url }
+                self?.userImages = photos.compactMap { $0.sizes?[$0.sizes!.count - 1].url }
             }
         }
     }
@@ -38,14 +38,6 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         return UICollectionViewCell()
     }
-    
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let vc = storyBoard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController else {return}
-//        vc.indexPathPhoto = indexPath.row
-//        vc.tempArray = image
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
 }
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{

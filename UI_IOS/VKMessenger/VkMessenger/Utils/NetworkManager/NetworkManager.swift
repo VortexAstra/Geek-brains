@@ -77,7 +77,6 @@ class NetworkManager {
             .responseData { response in
                 switch response.result {
                 case .success(let data):
-                    print(data)
                     let json = JSON(data)
                     let groupJSONs = json["response"]["items"].arrayValue
                     let groups = groupJSONs.compactMap { Group($0) }

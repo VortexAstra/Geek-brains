@@ -15,8 +15,9 @@ class User: Object {
         self.photo100 = json["photo_200"].stringValue
     }
     
-    override init() {
-        super.init()
+    override class func primaryKey() -> String? {
+        return "id"
     }
     
+    override init() {}
 }
