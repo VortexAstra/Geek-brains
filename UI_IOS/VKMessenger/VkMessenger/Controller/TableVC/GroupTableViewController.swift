@@ -3,10 +3,12 @@ import RealmSwift
 
 private var cell = "CellForGroup"
 
-class GroupTableViewController: UITableViewController {
+class GroupTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet{
+            searchBar.delegate = self
+            searchBar.showsCancelButton = true
             searchBar.placeholder = "Search by name of group"
         }
     }
@@ -64,7 +66,7 @@ class GroupTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.groups?.count ?? 0
+        return self.filteredGroup?.count ?? 0
     }
     
     
@@ -90,7 +92,7 @@ class GroupTableViewController: UITableViewController {
             }
             
             
-            guard let group = self.groups?[indexPath.row] else {return UITableViewCell()}
+            guard let group = self.filteredGroup?[indexPath.row] else {return UITableViewCell()}
             cell.config(with: group)
             
             return cell
@@ -131,8 +133,14 @@ class GroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let group = groups?[indexPath.row] else {return}
+            guard let group = filteredGroup?[indexPath.row] else {return}
             try? realm?.delete(object: group)
         }
+    }
+}
+
+extension GroupTableViewController {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.tableView.reloadData()
     }
 }

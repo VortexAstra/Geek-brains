@@ -12,7 +12,9 @@ class RealmManager {
         guard let realm = try? Realm(configuration: configurator) else { return nil }
         self.realm = realm
         
+        #if DEBUG
         print(realm.configuration.fileURL ?? "")
+        #endif
     }
     
     func add<T: Object>(object: T) throws {

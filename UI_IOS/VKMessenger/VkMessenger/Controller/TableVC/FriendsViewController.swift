@@ -57,7 +57,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
         friendToken?.invalidate()
     }
     
-//    MARK: LIFECYCLE
+    //    MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         createRealmNotification()
@@ -111,7 +111,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.users?.count ?? 0
+        return self.filteredUsers?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -122,6 +122,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
             cell.imageFriend.transform = CGAffineTransform(
                 translationX: self.view.bounds.width / 2,
                 y: 0)
+            
             UIView.animate(withDuration: 1.5,
                            delay: 0.3,
                            usingSpringWithDamping: 0.8,
@@ -152,8 +153,11 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
             }catch(let error){
                 print(error.localizedDescription)
             }
-        
+            
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "PhotoCollection", sender: nil)
     }
 }
 
@@ -162,14 +166,6 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
 //    MARK: Search Bar
 extension FriendsViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if (searchText.isEmpty){
-//            self.filteredFriends = self.friends
-            tableView.reloadData()
-            return
-        }
-//        self.filteredFriends = self.friends.filter {
-//            $0.firstName.lowercased().contains(searchText.lowercased())
-//        }
         self.tableView.reloadData()
     }
 }
@@ -178,17 +174,15 @@ extension FriendsViewController: UISearchBarDelegate{
 //  MARK: Segue
 extension FriendsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard
-//            segue.identifier == "PhotoCollection",
-//            let controller = segue.destination as? PhotoCollectionViewController,
-//            let indexPath = tableView.indexPathForSelectedRow
-//        else { return }
+        guard
+            segue.identifier == "PhotoCollection",
+            let controller = segue.destination as? PhotoCollectionViewController,
+            let indexPath = tableView.indexPathForSelectedRow
+        else { return }
         
-//        let firstLetter = self.firstLetters[indexPath.section]
         
-//        if let users = self.friendsDict[firstLetter] {
-//            let user = users[indexPath.row]
-//            controller.user = user
-//        }
+        let user = users?[indexPath.row]
+        controller.user = user
+        
     }
 }
