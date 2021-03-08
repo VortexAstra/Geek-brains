@@ -3,28 +3,51 @@ import Alamofire
 import SwiftyJSON
 import RealmSwift
 
-class Photo: Object {
+class Photo: Object, Codable {
     @objc dynamic var id: Int = 0
-    var sizes: [PhotoSize]?
+    var sizes = List<PhotoSize>()
     
-    init(_ json: JSON) {
+    convenience init(_ json: JSON) {
+        self.init()
         self.id = json["id"].intValue
-        self.sizes = json["sizes"].arrayValue.compactMap{PhotoSize($0)}
+        let tempArray: [PhotoSize] = json["sizes"].arrayValue.compactMap { PhotoSize ($0) }
+        tempArray.forEach { (photosize) in
+            self.sizes.append(photosize)
+        }
     }
-    override init(){}
+    
+    convenience init(id: Int, sizes: [PhotoSize]) {
+        self.init()
+        self.id = id
+        sizes.forEach { (photosize) in
+            self.sizes.append(photosize)
+        }
+    }
+    
+    override class func primaryKey() -> String? {
+        "id"
+    }
 }
 
-class PhotoSize: Object {
+class PhotoSize: Object, Codable {
     @objc dynamic var type: String = ""
     @objc dynamic var height: Int = 0
     @objc dynamic var width: Int = 0
     @objc dynamic var url: String = ""
     
-    init(_ json: JSON) {
+    convenience init(_ json: JSON) {
+        self.init()
         self.type = json["type"].stringValue
         self.height = json["height"].intValue
         self.width = json["width"].intValue
         self.url = json["url"].stringValue
     }
-    override init() {}
+    
+    convenience init(type: String, height: Int, width: Int, url: String) {
+        self.init()
+        self.type = type
+        self.height = height
+        self.width = width
+        self.url = url
+    }
 }

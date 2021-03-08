@@ -37,28 +37,37 @@ class NetworkManager {
     //MARK:- Load Friends Photos
     func loadPhotos(for userId: Int, completion: @escaping ([Photo]) -> Void) {
         let path = "/method/photos.getAll"
-        
-        let params: Parameters = [
-            "access_token": Session.shared.token,
-            "v": NetworkManager.version,
-            "extended": 1,
-            "owner_id": "\(userId)"
-        ]
-        
-        AF.request(NetworkManager.baseUrl + path,
-                   method: .get,
-                   parameters: params)
-            .response { response in
-                switch response.result {
-                case .success(let data):
-                    let json = JSON(data as Any)
-                    let photoJSONs = json["response"]["items"].arrayValue
-                    let photos = photoJSONs.compactMap { Photo($0) }
-                    completion(photos)
-                case .failure(let error):
-                    print(error)
-                }
-            }
+                
+                let params: Parameters = [
+                    "access_token": Session.shared.token,
+                    "v": NetworkManager.version,
+                    "extended": 1,
+                    "owner_id": "\(userId)"
+                ]
+                
+                AF.request(NetworkManager.baseUrl + path,
+                           method: .get,
+                           parameters: params)
+                    .response { response in
+                        switch response.result {
+                        case .success(let data):
+                            guard
+                                let data = data else { return }
+                            let json = JSON(data)
+                            let photoJSONs = json["response"]["items"].arrayValue
+                            let photos = photoJSONs.compactMap { Photo($0) }
+                            completion(photos)
+                            
+                            do {
+                                try RealmManager.shared?.add(objects: photos)
+                            } catch {
+                                print(error)
+                            }
+                            
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
     }
     
     //MARK:- Load Groups

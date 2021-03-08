@@ -8,21 +8,21 @@ class PhotoCollectionViewController: UICollectionViewController {
     var user: User?
     private var realmManager = RealmManager.shared
     
-    var userImages = [String]() {
+    private lazy var userImages = try? Realm().objects(Photo.self) {
         didSet {
             self.collectionView.reloadData()
         }
     }
     
-    private var image: Results<Photo>?{
-        let image: Results<Photo>? = realmManager?.getObjects()
-        return image
-    }
+    //    private var userImages: Results<Photo> {
+    //        let userImages: Results<Photo>? = realmManager?.getObjects()
+    //        return userImages!
+    //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-     
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -31,7 +31,6 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     func loadData(comletion: (() -> ())? = nil ) {
         let networkService = NetworkManager()
-        
         if let userId = self.user?.id {
             networkService.loadPhotos(for: userId) { [weak self] photos in
                 DispatchQueue.main.async {
@@ -44,23 +43,36 @@ class PhotoCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.userImages.count
+        return self.convertToArray(results: userImages).count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell,
+            let imgArray = self.userImages?[indexPath.row]
+        else { return UICollectionViewCell() }
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoCollectionViewCell{
-            let img = userImages[indexPath.row]
-            cell.configure(with: img)
-            return cell
-        }
-        
-        return UICollectionViewCell()
+        let img = imgArray.sizes.last
+        cell.configure(with: img?.url ?? "")
+        //        print(userImages.count)
+        //        let imgArray = userImages[indexPath.row]
+        //        let img = imgArray.sizes[indexPath.row].url
+        print(img)
+        //        cell.configure(with: img?.url ?? "")
+        return cell
     }
 }
+
 
 extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 200)
+    }
+}
+
+extension PhotoCollectionViewController {
+    private func convertToArray <T>(results: Results<T>?) -> [T] {
+        guard let results = results else { return [] }
+        return Array(results)
     }
 }

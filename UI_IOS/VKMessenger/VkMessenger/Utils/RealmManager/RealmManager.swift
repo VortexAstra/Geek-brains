@@ -2,7 +2,9 @@ import Foundation
 import RealmSwift
 
 class RealmManager {
+    
     static var shared = RealmManager()
+    
     
     private let realm: Realm
     
@@ -12,11 +14,9 @@ class RealmManager {
         guard let realm = try? Realm(configuration: configurator) else { return nil }
         self.realm = realm
         
-        #if DEBUG
         print(realm.configuration.fileURL ?? "")
-        #endif
     }
-    
+        
     func add<T: Object>(object: T) throws {
         try realm.write{
             realm.add(object)

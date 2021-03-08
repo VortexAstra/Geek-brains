@@ -17,6 +17,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
             tableView.rowHeight = 125
         }
     }
+    
     @IBOutlet weak var searchBar: UISearchBar!{
         didSet {
             searchBar.delegate = self
@@ -53,6 +54,7 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
         }
         return users?.filter("firstName CONTAINS %@", searchText)
     }
+    
     deinit {
         friendToken?.invalidate()
     }
@@ -155,9 +157,6 @@ class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITa
             }
             
         }
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "PhotoCollection", sender: nil)
     }
 }
 
