@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TestFireBase
-//
-//  Created by Артем Устинов on 12.03.2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
