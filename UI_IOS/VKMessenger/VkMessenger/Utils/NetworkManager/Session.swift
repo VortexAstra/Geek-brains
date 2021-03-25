@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-class Session {
+final class Session {
     
     private init() {}
     static let shared = Session()

@@ -2,7 +2,7 @@ import RealmSwift
 import SwiftyJSON
 
 
-class Group: Object {
+final class Group: Object {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""

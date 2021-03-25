@@ -1,6 +1,6 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
 
     
     @IBOutlet weak var userName: UILabel!

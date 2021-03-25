@@ -1,5 +1,5 @@
 import UIKit
 
-class News {
+final class News {
     
 }

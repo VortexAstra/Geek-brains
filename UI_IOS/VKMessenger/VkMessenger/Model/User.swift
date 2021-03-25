@@ -1,7 +1,7 @@
 import RealmSwift
 import SwiftyJSON
 
-class User: Object {
+final class User: Object {
 
     @objc dynamic var id: Int = 0
     @objc dynamic var firstName: String = ""

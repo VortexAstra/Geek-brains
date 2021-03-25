@@ -1,6 +1,6 @@
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+final class NewsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

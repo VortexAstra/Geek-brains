@@ -3,7 +3,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class NetworkManager {
+final class NetworkManager {
     
     private static let baseUrl = "https://api.vk.com"
     private static let version = "5.130"

@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 import RealmSwift
 
-class Photo: Object, Codable {
+final class Photo: Object, Codable {
     @objc dynamic var id: Int = 0
     var sizes = List<PhotoSize>()
     
@@ -29,7 +29,7 @@ class Photo: Object, Codable {
     }
 }
 
-class PhotoSize: Object, Codable {
+final class PhotoSize: Object, Codable {
     @objc dynamic var type: String = ""
     @objc dynamic var height: Int = 0
     @objc dynamic var width: Int = 0

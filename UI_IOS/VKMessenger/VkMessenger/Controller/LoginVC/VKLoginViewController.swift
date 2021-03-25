@@ -3,7 +3,7 @@ import WebKit
 import Alamofire
 import SwiftyJSON
 
-class VKLoginViewController: UIViewController {
+final class VKLoginViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView! {
         didSet {

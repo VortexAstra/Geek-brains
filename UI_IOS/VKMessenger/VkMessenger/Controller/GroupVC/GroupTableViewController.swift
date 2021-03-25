@@ -3,7 +3,7 @@ import RealmSwift
 
 private var cell = "CellForGroup"
 
-class GroupTableViewController: UITableViewController, UISearchBarDelegate {
+final class GroupTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar! {
         didSet{

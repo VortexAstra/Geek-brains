@@ -3,7 +3,7 @@ import UIKit
 
 private var cell = "CellForFriends"
 
-class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate {
+final class FriendsViewController: UIViewController, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     private var realmManager = RealmManager.shared
     private var friendToken: NotificationToken?
