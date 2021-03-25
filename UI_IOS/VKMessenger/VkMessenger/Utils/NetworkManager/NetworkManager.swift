@@ -19,9 +19,7 @@ class NetworkManager {
         ]
         
         AF.request(NetworkManager.baseUrl + path,
-                   method: .get,
-                   parameters: params)
-            .responseData { response in
+                   method: .get, parameters: params).responseData { response in
                 switch response.result {
                 case .success(let data):
                     let json = JSON(data)

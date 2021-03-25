@@ -54,11 +54,6 @@ class PhotoCollectionViewController: UICollectionViewController {
         
         let img = imgArray.sizes.last
         cell.configure(with: img?.url ?? "")
-        //        print(userImages.count)
-        //        let imgArray = userImages[indexPath.row]
-        //        let img = imgArray.sizes[indexPath.row].url
-        print(img)
-        //        cell.configure(with: img?.url ?? "")
         return cell
     }
 }

@@ -6,6 +6,7 @@ class PhotoViewController: UIViewController {
     
     var indexPathPhoto: Int?
     var tempArray: [UIImage]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageFriend?.image = tempArray![indexPathPhoto!]
