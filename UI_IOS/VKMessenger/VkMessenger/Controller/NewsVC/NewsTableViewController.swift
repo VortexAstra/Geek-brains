@@ -2,26 +2,36 @@ import UIKit
 
 final class NewsTableViewController: UITableViewController {
     
+    var news: [News]? {
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(NewsTableViewCell.nib, forCellReuseIdentifier: NewsTableViewCell.identifer)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let networkManager = NetworkManager()
+        networkManager.loadNews { [weak self] (news) in
+            self?.news = news
+            
+        }
+    }
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 1
+        return news?.count ?? 0
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifer, for: indexPath) as? NewsTableViewCell{
-            cell.labelNews.text = "NEWS with XIB cell"
-            cell.imageNews?.image = UIImage.init(systemName: "moon.fill")
+            guard let news = news?[indexPath.row] else {return NewsTableViewCell()}
+            
+            cell.configure(for: news)
             return cell
         }
         return UITableViewCell()

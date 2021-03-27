@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class NewsTableViewCell: UITableViewCell {
     
@@ -10,20 +11,14 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var labelNews: UILabel!
     @IBOutlet weak var imageNews: UIImageView!
     
-    var newLayer: CAGradientLayer = CAGradientLayer()
+    let newLayer: CAGradientLayer = CAGradientLayer()
     
     var count: Int = 0 {
         didSet{
             likeLabel.text = String(count)
         }
     }
-    
-    
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    
+        
     override func layoutSubviews() {
         super.layoutSubviews()
         newLayer.frame = contentView.frame
@@ -45,5 +40,10 @@ class NewsTableViewCell: UITableViewCell {
             }
             count += 1
         }
+    }
+    
+    func configure(for news: News) {
+        labelNews.text = news.text
+        self.imageNews.kf.setImage(with: URL(string: news.url))
     }
 }
