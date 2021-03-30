@@ -11,13 +11,13 @@ final class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(NewsTableViewCell.nib, forCellReuseIdentifier: NewsTableViewCell.identifer)
+        tableView.rowHeight = 120
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let networkManager = NetworkManager()
         networkManager.loadNews { [weak self] (news) in
             self?.news = news
-            
         }
     }
     // MARK: - Table view data source
@@ -35,9 +35,5 @@ final class NewsTableViewController: UITableViewController {
             return cell
         }
         return UITableViewCell()
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(150)
     }
 }

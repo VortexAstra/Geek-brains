@@ -12,7 +12,7 @@ final class User: Object {
         self.id = json["id"].intValue
         self.firstName = json["first_name"].stringValue
         self.lastName = json["last_name"].stringValue
-        self.photo100 = json["photo_200"].stringValue
+        self.photo100 = json["photo_100"].stringValue
     }
     
     override class func primaryKey() -> String? {

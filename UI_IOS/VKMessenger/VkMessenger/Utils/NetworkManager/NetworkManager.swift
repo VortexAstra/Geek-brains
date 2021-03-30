@@ -8,7 +8,7 @@ final class NetworkManager {
     private static let baseUrl = "https://api.vk.com"
     private static let version = "5.130"
     
-//    MARK: Load News
+    //    MARK: Load News
     func loadNews(completion: @escaping ([News]) -> Void) {
         let path = "/method/newsfeed.get"
         
@@ -26,11 +26,38 @@ final class NetworkManager {
                 let newsJSONList = json["response"]["items"].arrayValue
                 let news = newsJSONList.compactMap { News($0) }
                 completion(news)
-
+                
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    func getUserInfo(completion: @escaping ([User]) -> Void ) {
+        let path = "/method/users.get"
+        
+        let params: Parameters = [
+            "access_token": Session.shared.token,
+            "user_ids": "\(Session.shared.userId)",
+            "v": NetworkManager.version,
+            "fields": "photo_100, online"
+        ]
+        
+        
+        AF.request(NetworkManager.baseUrl + path,
+                   method: .get, parameters: params).responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        let friendsJSONList = json["response"].arrayValue
+                        print(friendsJSONList)
+                        let friends = friendsJSONList.compactMap { User($0) }
+                        print(friends)
+                        completion(friends)
+                    case .failure(let error):
+                        print(error)
+                    }
+                   }
     }
     
     //MARK:- Load Friends
@@ -39,8 +66,9 @@ final class NetworkManager {
         
         let params: Parameters = [
             "access_token": Session.shared.token,
+            "user_ids": "69466672",
             "v": NetworkManager.version,
-            "fields": "photo_200"
+            "fields": "city,photo_100,counters,online",
         ]
         print(Session.shared.token)
         AF.request(NetworkManager.baseUrl + path,
