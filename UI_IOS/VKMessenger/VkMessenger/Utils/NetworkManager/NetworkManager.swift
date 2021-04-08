@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
 import Alamofire
+import PromiseKit
 import SwiftyJSON
 
 final class NetworkManager {
@@ -19,6 +20,7 @@ final class NetworkManager {
         ]
         
         AF.request(NetworkManager.baseUrl + path, method: .get, parameters: params).responseData { (response) in
+            
             switch response.result{
             
             case .success(let data):
@@ -71,6 +73,7 @@ final class NetworkManager {
             "fields": "city,photo_100,counters,online",
         ]
         print(Session.shared.token)
+        
         AF.request(NetworkManager.baseUrl + path,
                    method: .get, parameters: params).responseData { response in
                     switch response.result {

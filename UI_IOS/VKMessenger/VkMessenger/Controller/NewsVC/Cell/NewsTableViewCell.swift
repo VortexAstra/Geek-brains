@@ -11,7 +11,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var labelNews: UILabel!
     @IBOutlet weak var imageNews: UIImageView!
     
-    let newLayer: CAGradientLayer = CAGradientLayer()
     
     var count: Int = 0 {
         didSet{
@@ -21,9 +20,16 @@ class NewsTableViewCell: UITableViewCell {
         
     override func layoutSubviews() {
         super.layoutSubviews()
-        newLayer.frame = contentView.frame
-        newLayer.colors = [UIColor.white.cgColor, UIColor.blue.cgColor ]
-        contentView.layer.insertSublayer(newLayer, at: 0)
+    }
+
+    func configure(for news: News) {
+        labelNews.text = news.text
+        self.imageNews.kf.setImage(with: URL(string: news.url))
+    }
+    
+    override func prepareForReuse() {
+        self.textLabel?.text = ""
+        self.imageNews.image = UIImage(named: "")
     }
     
     @IBAction func likeButton(_ sender: UIButton) {
@@ -40,10 +46,5 @@ class NewsTableViewCell: UITableViewCell {
             }
             count += 1
         }
-    }
-    
-    func configure(for news: News) {
-        labelNews.text = news.text
-        self.imageNews.kf.setImage(with: URL(string: news.url))
     }
 }

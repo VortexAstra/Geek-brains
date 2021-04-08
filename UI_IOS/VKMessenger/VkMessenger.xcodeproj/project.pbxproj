@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51C59137DD37D65742093D48 /* Pods_VkMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8688368D2F5FEC2F998688D9 /* Pods_VkMessenger.framework */; };
+		777C1AEC261F630C002DD9E9 /* NewsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777C1AEB261F630C002DD9E9 /* NewsHeader.swift */; };
 		862AC14C26064C06000CF9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866743E726027C0100D6B4A6 /* LaunchScreen.storyboard */; };
 		862AC17526067C34000CF9FF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862AC17426067C34000CF9FF /* News.swift */; };
 		8667440326027C0100D6B4A6 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866743C626027C0100D6B4A6 /* FriendsViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		2093E6AB30EDB9CBD8A31D56 /* Pods-VkMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VkMessenger.debug.xcconfig"; path = "Target Support Files/Pods-VkMessenger/Pods-VkMessenger.debug.xcconfig"; sourceTree = "<group>"; };
+		777C1AEB261F630C002DD9E9 /* NewsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeader.swift; sourceTree = "<group>"; };
 		862AC17426067C34000CF9FF /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		866743C626027C0100D6B4A6 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		866743C726027C0100D6B4A6 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		866743D426027C0100D6B4A6 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				777C1AEB261F630C002DD9E9 /* NewsHeader.swift */,
 				866743D526027C0100D6B4A6 /* FriendsHeader.swift */,
 				866743D626027C0100D6B4A6 /* GroupHeader.swift */,
 			);
@@ -487,6 +490,7 @@
 				8667442126027C0100D6B4A6 /* CustomPushAnimator.swift in Sources */,
 				8667442A26027C0100D6B4A6 /* User.swift in Sources */,
 				8667440526027C0100D6B4A6 /* NewsTableViewController.swift in Sources */,
+				777C1AEC261F630C002DD9E9 /* NewsHeader.swift in Sources */,
 				8667441C26027C0100D6B4A6 /* Session.swift in Sources */,
 				8667441026027C0100D6B4A6 /* GroupTableViewController.swift in Sources */,
 				8667441F26027C0100D6B4A6 /* LikeView.swift in Sources */,
