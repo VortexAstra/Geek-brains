@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BT4-33-49m">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3AF-Tm-q8y">
+                                <rect key="frame" x="0.0" y="457.66666666666674" width="414" height="394.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="258-Tt-tEq">
+                                        <rect key="frame" x="10" y="10" width="394" height="374.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2w-2s-t2h" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="0.0" width="374" height="91.666666666666671"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <state key="normal" title="Play game">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="G4Q-lp-dzJ" kind="show" identifier="toGameVC" id="6Fo-ud-F7A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLG-ff-ozl" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="141.66666666666669" width="374" height="91.333333333333314"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Score">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="YkB-5c-NFr" kind="show" id="XFq-aR-i1z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phc-Lc-RNn" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="282.99999999999994" width="374" height="91.333333333333314"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Settings">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="kDc-T3-pMb" kind="show" id="XvF-Zn-VDA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstItem="r2w-2s-t2h" firstAttribute="leading" secondItem="258-Tt-tEq" secondAttribute="leading" constant="10" id="IUm-EC-qQ0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Phc-Lc-RNn" secondAttribute="trailing" constant="10" id="KZb-pJ-HkK"/>
+                                            <constraint firstItem="Phc-Lc-RNn" firstAttribute="leading" secondItem="258-Tt-tEq" secondAttribute="leading" constant="10" id="i4b-QV-Fk5"/>
+                                            <constraint firstAttribute="trailing" secondItem="aLG-ff-ozl" secondAttribute="trailing" constant="10" id="sv0-oJ-Gze"/>
+                                            <constraint firstAttribute="trailing" secondItem="r2w-2s-t2h" secondAttribute="trailing" constant="10" id="whn-Po-I6Y"/>
+                                            <constraint firstItem="aLG-ff-ozl" firstAttribute="leading" secondItem="258-Tt-tEq" secondAttribute="leading" constant="10" id="yfr-qj-i0h"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="258-Tt-tEq" secondAttribute="trailing" constant="10" id="Cea-YP-b83"/>
+                                    <constraint firstItem="258-Tt-tEq" firstAttribute="leading" secondItem="3AF-Tm-q8y" secondAttribute="leading" constant="10" id="Jzy-38-0ix"/>
+                                    <constraint firstAttribute="bottom" secondItem="258-Tt-tEq" secondAttribute="bottom" constant="10" id="gH8-xC-Y9S"/>
+                                    <constraint firstItem="258-Tt-tEq" firstAttribute="centerX" secondItem="3AF-Tm-q8y" secondAttribute="centerX" id="iG7-Nj-wXF"/>
+                                    <constraint firstItem="258-Tt-tEq" firstAttribute="top" secondItem="3AF-Tm-q8y" secondAttribute="top" constant="10" id="mdR-Ev-lCc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who want to be a millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKJ-6i-i51">
+                                <rect key="frame" x="20" y="44.000000000000014" width="374" height="240.33333333333337"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="3AF-Tm-q8y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4oP-sH-hZj"/>
+                            <constraint firstItem="3AF-Tm-q8y" firstAttribute="top" secondItem="OKJ-6i-i51" secondAttribute="bottom" constant="173.5" id="5rT-ie-Whu"/>
+                            <constraint firstItem="OKJ-6i-i51" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GUg-iA-q78"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OKJ-6i-i51" secondAttribute="trailing" constant="20" id="Pnv-ei-scW"/>
+                            <constraint firstItem="3AF-Tm-q8y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.44" id="X6T-BC-iKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3AF-Tm-q8y" secondAttribute="bottom" constant="10" id="cNU-9n-mn6"/>
+                            <constraint firstItem="OKJ-6i-i51" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="cuV-dp-KrL"/>
+                            <constraint firstItem="3AF-Tm-q8y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gfX-WR-eix"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="mUO-FC-fv0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.2" y="118.29085457271366"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="nUm-rK-Bd0">
+            <objects>
+                <viewController id="YkB-5c-NFr" customClass="ScoreViewController" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NPx-vN-R9t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="RwZ-qT-rn2">
+                                <rect key="frame" x="144.66666666666666" y="242.66666666666663" width="124.99999999999997" height="186"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCT-kS-em6">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                        <state key="normal" title="Save score to disk">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton:" destination="YkB-5c-NFr" eventType="touchUpInside" id="GfQ-cp-XNG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My0-jS-nCL">
+                                        <rect key="frame" x="23" y="156.00000000000003" width="79" height="30"/>
+                                        <state key="normal" title="Print Result">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showButton:" destination="YkB-5c-NFr" eventType="touchUpInside" id="lhg-wK-VsP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jhf-rb-XEy">
+                                <rect key="frame" x="20" y="108" width="374" height="20.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last Score: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q0-of-Yfd">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvg-OJ-7pL">
+                                        <rect key="frame" x="125" y="0.0" width="94.666666666666686" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="It good result bro✌️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-HE-TmS">
+                                        <rect key="frame" x="220.66666666666663" y="0.0" width="153.33333333333337" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TNd-rv-fS8"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="RwZ-qT-rn2" firstAttribute="top" secondItem="Jhf-rb-XEy" secondAttribute="bottom" constant="114.33" id="FdC-fK-bdu"/>
+                            <constraint firstItem="TNd-rv-fS8" firstAttribute="trailing" secondItem="Jhf-rb-XEy" secondAttribute="trailing" constant="20" id="GBI-ZK-NPd"/>
+                            <constraint firstItem="Jhf-rb-XEy" firstAttribute="top" secondItem="TNd-rv-fS8" secondAttribute="top" constant="20" id="NaZ-7L-2dA"/>
+                            <constraint firstItem="Jhf-rb-XEy" firstAttribute="leading" secondItem="TNd-rv-fS8" secondAttribute="leading" constant="20" id="pkD-Jw-40v"/>
+                            <constraint firstItem="RwZ-qT-rn2" firstAttribute="centerX" secondItem="NPx-vN-R9t" secondAttribute="centerX" id="y54-dT-wff"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DdB-ej-G7k"/>
+                    <connections>
+                        <outlet property="countLabel" destination="vvg-OJ-7pL" id="BAv-rb-0oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7B-U9-OIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="139.95535714285714"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="S7e-M4-hdV">
+            <objects>
+                <viewController id="kDc-T3-pMb" customClass="SettingsViewController" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="heq-XZ-K5g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="deU-Pd-iU3"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="13S-nu-pcS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2u-ST-6wf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="907"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="OSy-NH-BmV">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G4Q-lp-dzJ" customClass="GameViewController" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mIB-rn-VJA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYw-hb-qch">
+                                <rect key="frame" x="20" y="123" width="374" height="177"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-zi-tTP">
+                                <rect key="frame" x="164.66666666666666" y="350" width="85" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4T-FI-GwE">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUs-lU-yFB">
+                                        <rect key="frame" x="73.333333333333343" y="0.0" width="11.666666666666671" height="22"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYQ-E1-NBd">
+                                <rect key="frame" x="0.0" y="501.66666666666674" width="414" height="394.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-7c-Dyg">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="354.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drb-Nl-bBz" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnAswerButton:" destination="G4Q-lp-dzJ" eventType="touchUpInside" id="EGK-zK-TXa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-M5-Ddh" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="95.999999999999943" width="414" height="66.666666666666686"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnAswerButton:" destination="G4Q-lp-dzJ" eventType="touchUpInside" id="5u2-uQ-Jyv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHL-hZ-ya9" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="191.66666666666669" width="414" height="67"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnAswerButton:" destination="G4Q-lp-dzJ" eventType="touchUpInside" id="gHt-r2-xgy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-yK-z2W" customClass="MyButton" customModule="Who_want_to_be_a_millionaire" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="287.66666666666669" width="414" height="66.666666666666686"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnAswerButton:" destination="G4Q-lp-dzJ" eventType="touchUpInside" id="hhz-Iv-Piq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="7VY-7c-Dyg" firstAttribute="leading" secondItem="dYQ-E1-NBd" secondAttribute="leading" id="JIC-9C-GeJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="7VY-7c-Dyg" secondAttribute="trailing" id="cA7-zb-oAX"/>
+                                    <constraint firstItem="7VY-7c-Dyg" firstAttribute="top" secondItem="dYQ-E1-NBd" secondAttribute="top" constant="10" id="nQQ-Ah-968"/>
+                                    <constraint firstAttribute="bottom" secondItem="7VY-7c-Dyg" secondAttribute="bottom" constant="30" id="woV-M6-OOi"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="KLK-To-eot">
+                                <rect key="frame" x="31" y="459.66666666666669" width="352" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-Al-8wU">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" image="50.circle" catalog="system">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TO-79-b5N">
+                                        <rect key="frame" x="158" y="0.0" width="36" height="22"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" image="phone" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngZ-wl-cKb">
+                                        <rect key="frame" x="316" y="0.0" width="36" height="22"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" image="person.3" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="877-nQ-qqR"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="iYw-hb-qch" firstAttribute="leading" secondItem="877-nQ-qqR" secondAttribute="leading" constant="20" id="4Yj-1k-LMf"/>
+                            <constraint firstItem="iYw-hb-qch" firstAttribute="top" secondItem="877-nQ-qqR" secondAttribute="top" constant="35" id="50w-kc-qY2"/>
+                            <constraint firstItem="mbb-zi-tTP" firstAttribute="top" secondItem="iYw-hb-qch" secondAttribute="bottom" constant="50" id="8bg-7M-YlA"/>
+                            <constraint firstItem="dYQ-E1-NBd" firstAttribute="trailing" secondItem="877-nQ-qqR" secondAttribute="trailing" id="CGC-Qg-pxn"/>
+                            <constraint firstItem="dYQ-E1-NBd" firstAttribute="leading" secondItem="877-nQ-qqR" secondAttribute="leading" id="J6S-cs-KSG"/>
+                            <constraint firstItem="KLK-To-eot" firstAttribute="centerX" secondItem="mIB-rn-VJA" secondAttribute="centerX" id="JCb-0o-GZD"/>
+                            <constraint firstItem="iYw-hb-qch" firstAttribute="height" secondItem="7VY-7c-Dyg" secondAttribute="height" multiplier="0.5" id="Pxb-KP-nh4"/>
+                            <constraint firstItem="dYQ-E1-NBd" firstAttribute="height" secondItem="mIB-rn-VJA" secondAttribute="height" multiplier="0.44" id="c6U-pI-lSx"/>
+                            <constraint firstItem="877-nQ-qqR" firstAttribute="trailing" secondItem="iYw-hb-qch" secondAttribute="trailing" constant="20" id="c8E-0i-uhw"/>
+                            <constraint firstItem="dYQ-E1-NBd" firstAttribute="top" secondItem="KLK-To-eot" secondAttribute="bottom" constant="20" id="dkG-YK-odC"/>
+                            <constraint firstAttribute="bottom" secondItem="dYQ-E1-NBd" secondAttribute="bottom" id="iLp-S6-gch"/>
+                            <constraint firstItem="mbb-zi-tTP" firstAttribute="centerX" secondItem="mIB-rn-VJA" secondAttribute="centerX" id="zM6-hV-1Y7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KGH-U6-yHx"/>
+                    <connections>
+                        <outlet property="firstAnswerButton" destination="drb-Nl-bBz" id="Xx6-b1-En6"/>
+                        <outlet property="fourthAnswerButton" destination="oJ7-yK-z2W" id="Vds-um-ZJI"/>
+                        <outlet property="questionLabel" destination="iYw-hb-qch" id="gQq-Ig-04s"/>
+                        <outlet property="scoreCountLabel" destination="mUs-lU-yFB" id="ksN-C8-Yd5"/>
+                        <outlet property="secondAnswerButton" destination="iAd-M5-Ddh" id="NZ1-SZ-vwz"/>
+                        <outlet property="thirdAnswerButton" destination="DHL-hZ-ya9" id="t1K-cv-Zzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dle-6s-tHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="-536.38392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4aU-a1-gYy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BT4-33-49m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DpM-24-Ti3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="feX-6M-nqR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZp-Bo-wNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="DHL-hZ-ya9">
+            <size key="intrinsicContentSize" width="30" height="45"/>
+        </designable>
+        <designable name="Phc-Lc-RNn">
+            <size key="intrinsicContentSize" width="125" height="51"/>
+        </designable>
+        <designable name="aLG-ff-ozl">
+            <size key="intrinsicContentSize" width="78" height="51"/>
+        </designable>
+        <designable name="drb-Nl-bBz">
+            <size key="intrinsicContentSize" width="30" height="41"/>
+        </designable>
+        <designable name="iAd-M5-Ddh">
+            <size key="intrinsicContentSize" width="30" height="45"/>
+        </designable>
+        <designable name="oJ7-yK-z2W">
+            <size key="intrinsicContentSize" width="30" height="45"/>
+        </designable>
+        <designable name="r2w-2s-t2h">
+            <size key="intrinsicContentSize" width="143" height="51"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="50.circle" catalog="system" width="128" height="121"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
