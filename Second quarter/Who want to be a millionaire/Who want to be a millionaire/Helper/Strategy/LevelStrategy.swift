@@ -8,5 +8,8 @@
 import Foundation
 
 protocol levelStrategy {
-    func selectDifficulty(lvl: LevelDifficulty) -> [String]
+    func selectQuestionLabel() -> [String]
+    func selectAnswerOptins() -> [[String]]
+    func selectAnswer() -> [String]
+
 }

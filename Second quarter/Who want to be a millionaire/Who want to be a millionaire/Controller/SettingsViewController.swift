@@ -9,6 +9,12 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var questionsTextField: UITextField!
+
+    @IBOutlet weak var answerTextField: UITextField!
+
+    @IBOutlet weak var answerOptinsTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,5 +23,14 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    @IBAction func addQuestionsToPull(_ sender: Any) {
+
+        if let newAnswer = answerTextField.text, let question = questionsTextField.text {
+            Questions.share.answer.append(newAnswer)
+            Questions.share.question.append(question)
+            print(answerOptinsTextField.text as Any)
+        }
     }
 }

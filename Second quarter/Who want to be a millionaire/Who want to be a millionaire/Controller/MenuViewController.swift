@@ -23,7 +23,8 @@ final class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGameVC" {
             if let destination = segue.destination as? GameViewController {
-                destination.difficultyLvl = LevelDifficulty(rawValue: segmentControl.selectedSegmentIndex)
+                let diff = LevelDifficulty(rawValue: segmentControl.selectedSegmentIndex)
+                destination.difficultyLvl = diff == .easy ? EasyLVL() : HardLvl()
                 destination.delegate = self
             }
         }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class Questions {
-    static let share = Questions()
+struct Questions {
+    static var share = Questions()
 
     private init(){}
 

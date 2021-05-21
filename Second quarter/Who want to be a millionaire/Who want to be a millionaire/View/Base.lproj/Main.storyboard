@@ -217,14 +217,55 @@
                     <view key="view" contentMode="scaleToFill" id="heq-XZ-K5g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="kf2-ns-9ni">
+                                <rect key="frame" x="113.66666666666669" y="302.66666666666669" width="187" height="291.00000000000006"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIh-MM-5E4">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sl0-dY-k3B">
+                                        <rect key="frame" x="0.0" y="81" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3W-vy-Peb">
+                                        <rect key="frame" x="0.0" y="162" width="187" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6u-Kr-Aan">
+                                        <rect key="frame" x="0.0" y="242.99999999999994" width="187" height="48"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="33"/>
+                                        <state key="normal" title="Add questions">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addQuestionsToPull:" destination="kDc-T3-pMb" eventType="touchUpInside" id="JLE-Fj-65J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="deU-Pd-iU3"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="kf2-ns-9ni" firstAttribute="centerY" secondItem="heq-XZ-K5g" secondAttribute="centerY" id="cbp-rA-io1"/>
+                            <constraint firstItem="kf2-ns-9ni" firstAttribute="centerX" secondItem="heq-XZ-K5g" secondAttribute="centerX" id="ziv-1k-BG3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="13S-nu-pcS"/>
+                    <connections>
+                        <outlet property="answerOptinsTextField" destination="k3W-vy-Peb" id="sCh-1q-qf6"/>
+                        <outlet property="answerTextField" destination="Sl0-dY-k3B" id="WKo-3I-fx3"/>
+                        <outlet property="questionsTextField" destination="eIh-MM-5E4" id="cqk-ee-XgX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2u-ST-6wf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="907"/>
+            <point key="canvasLocation" x="1902.8985507246377" y="906.69642857142856"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="OSy-NH-BmV">
