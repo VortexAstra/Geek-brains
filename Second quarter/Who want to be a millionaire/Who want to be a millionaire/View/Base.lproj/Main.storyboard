@@ -92,6 +92,25 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-qg-rF8">
+                                <rect key="frame" x="154.66666666666666" y="299.33333333333331" width="104.99999999999997" height="71.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lvl mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sz-DK-g5r">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yO7-zw-xNw">
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="105" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <segments>
+                                            <segment title="Easy"/>
+                                            <segment title="Hard "/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -103,10 +122,15 @@
                             <constraint firstItem="3AF-Tm-q8y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.44" id="X6T-BC-iKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3AF-Tm-q8y" secondAttribute="bottom" constant="10" id="cNU-9n-mn6"/>
                             <constraint firstItem="OKJ-6i-i51" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="cuV-dp-KrL"/>
+                            <constraint firstItem="IGa-qg-rF8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ec4-9Y-LbT"/>
                             <constraint firstItem="3AF-Tm-q8y" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gfX-WR-eix"/>
+                            <constraint firstItem="IGa-qg-rF8" firstAttribute="top" secondItem="OKJ-6i-i51" secondAttribute="bottom" constant="15" id="nqE-ha-GNy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="mUO-FC-fv0"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="yO7-zw-xNw" id="mvv-Tf-Ua2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,15 +241,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="mbb-zi-tTP">
-                                <rect key="frame" x="164.66666666666666" y="350" width="85" height="22"/>
+                                <rect key="frame" x="201.33333333333334" y="350" width="11.666666666666657" height="22"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4T-FI-GwE">
-                                        <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="22"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUs-lU-yFB">
-                                        <rect key="frame" x="73.333333333333343" y="0.0" width="11.666666666666671" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="11.666666666666666" height="22"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                     </label>

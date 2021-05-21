@@ -9,13 +9,16 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
-    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel! {
+        didSet {
+            if let score = Game.shared.gameSession?.score {
+                countLabel.text = String(score)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let score = Game.shared.gameSession?.score {
-            countLabel.text = String(score)
-        }
         // Do any additional setup after loading the view.
     }
     

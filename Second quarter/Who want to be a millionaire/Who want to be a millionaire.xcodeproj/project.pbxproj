@@ -24,6 +24,9 @@
 		771F01E226513383008E37D6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F01E126513383008E37D6 /* Game.swift */; };
 		771F01E42651342B008E37D6 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F01E32651342B008E37D6 /* GameSession.swift */; };
 		771F01E826514FF9008E37D6 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771F01E726514FF9008E37D6 /* UserSettings.swift */; };
+		7734A9562656EA6400DA4C49 /* LevelStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734A9552656EA6400DA4C49 /* LevelStrategy.swift */; };
+		7734A9582656EB5200DA4C49 /* EasyLvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734A9572656EB5200DA4C49 /* EasyLvl.swift */; };
+		7734A95A2656EB5B00DA4C49 /* HardLvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734A9592656EB5B00DA4C49 /* HardLvl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		771F01E126513383008E37D6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		771F01E32651342B008E37D6 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		771F01E726514FF9008E37D6 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		7734A9552656EA6400DA4C49 /* LevelStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelStrategy.swift; sourceTree = "<group>"; };
+		7734A9572656EB5200DA4C49 /* EasyLvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLvl.swift; sourceTree = "<group>"; };
+		7734A9592656EB5B00DA4C49 /* HardLvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardLvl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		771F01D3264D93D0008E37D6 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7734A9542656EA4400DA4C49 /* Strategy */,
 				771F01D4265011E4008E37D6 /* MyButton */,
 				771F019F264D9331008E37D6 /* AppDelegate.swift */,
 				771F01A1264D9331008E37D6 /* SceneDelegate.swift */,
@@ -193,6 +200,16 @@
 				771F01DF265066E3008E37D6 /* SettingsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7734A9542656EA4400DA4C49 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				7734A9552656EA6400DA4C49 /* LevelStrategy.swift */,
+				7734A9572656EB5200DA4C49 /* EasyLvl.swift */,
+				7734A9592656EB5B00DA4C49 /* HardLvl.swift */,
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,13 +343,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				771F01E42651342B008E37D6 /* GameSession.swift in Sources */,
+				7734A95A2656EB5B00DA4C49 /* HardLvl.swift in Sources */,
 				771F01D6265011EF008E37D6 /* MyButton.swift in Sources */,
 				771F01E226513383008E37D6 /* Game.swift in Sources */,
 				771F01E826514FF9008E37D6 /* UserSettings.swift in Sources */,
 				771F01AA264D9331008E37D6 /* Who_want_to_be_a_millionaire.xcdatamodeld in Sources */,
 				771F01A4264D9331008E37D6 /* MenuViewController.swift in Sources */,
+				7734A9582656EB5200DA4C49 /* EasyLvl.swift in Sources */,
 				771F01DA26502044008E37D6 /* Questions.swift in Sources */,
 				771F01A0264D9331008E37D6 /* AppDelegate.swift in Sources */,
+				7734A9562656EA6400DA4C49 /* LevelStrategy.swift in Sources */,
 				771F01D82650161B008E37D6 /* GameViewController.swift in Sources */,
 				771F01A2264D9331008E37D6 /* SceneDelegate.swift in Sources */,
 				771F01DE265066CF008E37D6 /* ScoreViewController.swift in Sources */,

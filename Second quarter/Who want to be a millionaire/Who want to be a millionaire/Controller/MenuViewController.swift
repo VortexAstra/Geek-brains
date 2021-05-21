@@ -7,8 +7,10 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+final class MenuViewController: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurationGameSession()
@@ -20,14 +22,15 @@ class MenuViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGameVC" {
-            let destination = segue.destination as? GameViewController
-            destination?.delegate = self
+            if let destination = segue.destination as? GameViewController {
+                destination.difficultyLvl = LevelDifficulty(rawValue: segmentControl.selectedSegmentIndex)
+                destination.delegate = self
+            }
         }
     }
 
     fileprivate func configurationGameSession() {
-        let gameSession = GameSession()
-        Game.shared.gameSession = gameSession
+        Game.shared.gameSession = GameSession()
     }
 }
 
