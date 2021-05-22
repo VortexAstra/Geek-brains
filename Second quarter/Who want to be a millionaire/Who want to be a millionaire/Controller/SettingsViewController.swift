@@ -13,12 +13,13 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var answerTextField: UITextField!
 
-    @IBOutlet weak var answerOptinsTextField: UITextField!
-
+    @IBOutlet weak var answerOptinal1: UITextField!
+    @IBOutlet weak var answerOptinal2: UITextField!
+    @IBOutlet weak var anserOptinal3: UITextField!
+    @IBOutlet weak var answerOptinal4: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,11 +27,19 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func addQuestionsToPull(_ sender: Any) {
+        if let newAnswer = answerTextField.text, let question = questionsTextField.text,
+           let answerOptinal = answerOptinal1.text,  let answerOptina2 = answerOptinal2.text,
+           let answerOptina3 = anserOptinal3.text ,  let answerOptina4 = answerOptinal4.text {
 
-        if let newAnswer = answerTextField.text, let question = questionsTextField.text {
-            Questions.share.answer.append(newAnswer)
-            Questions.share.question.append(question)
-            print(answerOptinsTextField.text as Any)
+            if !(question.isEmpty || answerOptinal.isEmpty || answerOptinal.isEmpty ||
+                    answerOptina2.isEmpty || answerOptina3.isEmpty || answerOptina4.isEmpty) {
+
+                Questions.share.answer.append(newAnswer)
+                Questions.share.question.append(question)
+                Questions.share.answerOptions.append([answerOptinal, answerOptina2, answerOptina3, answerOptina4])
+
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
 }
