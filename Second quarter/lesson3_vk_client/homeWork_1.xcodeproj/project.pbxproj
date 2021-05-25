@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5DC3809695F037A6B111CF13 /* Pods_homeWork_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */; };
+		77B68812265D20DD0042FFD1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B68811265D20DD0042FFD1 /* WebKit.framework */; };
+		77B68814265D4B020042FFD1 /* AdapterFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B68813265D4B020042FFD1 /* AdapterFriends.swift */; };
+		77B68816265D4B3F0042FFD1 /* AFServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B68815265D4B3F0042FFD1 /* AFServiceAdapter.swift */; };
+		77B68818265D4FD20042FFD1 /* VKFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B68817265D4FD20042FFD1 /* VKFeedVM.swift */; };
+		77B6881A265D4FF90042FFD1 /* FactoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B68819265D4FF90042FFD1 /* FactoryVM.swift */; };
 		840110E021EC364C0044AEB7 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840110DF21EC364C0044AEB7 /* TestViewController.swift */; };
 		84105FB3217F173D00EEF673 /* VKApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84105FB2217F173D00EEF673 /* VKApiViewController.swift */; };
 		8415662D21B7916500AF9803 /* SearchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415662C21B7916500AF9803 /* SearchGroupViewController.swift */; };
@@ -63,6 +68,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77B68811265D20DD0042FFD1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		77B68813265D4B020042FFD1 /* AdapterFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterFriends.swift; sourceTree = "<group>"; };
+		77B68815265D4B3F0042FFD1 /* AFServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFServiceAdapter.swift; sourceTree = "<group>"; };
+		77B68817265D4FD20042FFD1 /* VKFeedVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFeedVM.swift; sourceTree = "<group>"; };
+		77B68819265D4FF90042FFD1 /* FactoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryVM.swift; sourceTree = "<group>"; };
 		840110DF21EC364C0044AEB7 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		84105FB2217F173D00EEF673 /* VKApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKApiViewController.swift; sourceTree = "<group>"; };
 		8415662C21B7916500AF9803 /* SearchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B68812265D20DD0042FFD1 /* WebKit.framework in Frameworks */,
 				5DC3809695F037A6B111CF13 /* Pods_homeWork_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +148,7 @@
 		0C5C774FDF563F4FBC73C17B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77B68811265D20DD0042FFD1 /* WebKit.framework */,
 				FB03EE607AE3B19FD932EA7A /* Pods_homeWork_1.framework */,
 			);
 			name = Frameworks;
@@ -232,6 +244,8 @@
 				8442ABAA2192EC0D003DDA6A /* VkResponseParser.swift */,
 				8442ABAF21957D2D003DDA6A /* RealmWorker.swift */,
 				AA3D1EB021B25109000ED1C1 /* FirebaseService.swift */,
+				77B68815265D4B3F0042FFD1 /* AFServiceAdapter.swift */,
+				77B68813265D4B020042FFD1 /* AdapterFriends.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -349,6 +363,8 @@
 				AA5766E52160AD8C0029F786 /* Friend.swift */,
 				AA5766EF2160D82B0029F786 /* FriendList.swift */,
 				AA5766FE2160F2CD0029F786 /* New.swift */,
+				77B68817265D4FD20042FFD1 /* VKFeedVM.swift */,
+				77B68819265D4FF90042FFD1 /* FactoryVM.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -529,6 +545,7 @@
 			files = (
 				AA5766F22160DBA70029F786 /* FriendHeaderTableViewCell.swift in Sources */,
 				AA5766EE2160CB9C0029F786 /* FriendCollectionViewCell.swift in Sources */,
+				77B68818265D4FD20042FFD1 /* VKFeedVM.swift in Sources */,
 				842A0408216DB83F00FAFF92 /* CustomSearchBar.swift in Sources */,
 				8442ABAB2192EC0E003DDA6A /* VkResponseParser.swift in Sources */,
 				AA3D1EB121B25109000ED1C1 /* FirebaseService.swift in Sources */,
@@ -540,6 +557,8 @@
 				8415662F21B7918C00AF9803 /* MainGroupViewController.swift in Sources */,
 				8442AB9721870B13003DDA6A /* VkPhoto.swift in Sources */,
 				84C1209B2161C6ED0044CBEB /* MyGroupCell.swift in Sources */,
+				77B68814265D4B020042FFD1 /* AdapterFriends.swift in Sources */,
+				77B6881A265D4FF90042FFD1 /* FactoryVM.swift in Sources */,
 				AA5766D92160A72F0029F786 /* LoginViewController.swift in Sources */,
 				8424E54D217485B400188E61 /* CustomSquareIndicator.swift in Sources */,
 				AA5766FF2160F2CD0029F786 /* New.swift in Sources */,
@@ -568,6 +587,7 @@
 				84D1DEBC21AE624A006FC20E /* NewsInfoViewController.swift in Sources */,
 				8442ABA9219132B7003DDA6A /* AlamofireService.swift in Sources */,
 				84C120962161C5AD0044CBEB /* GroupsViewController.swift in Sources */,
+				77B68816265D4B3F0042FFD1 /* AFServiceAdapter.swift in Sources */,
 				AA5766FD2160F0C10029F786 /* NewsViewController.swift in Sources */,
 				AA5766E32160AD140029F786 /* Extension.swift in Sources */,
 				8424E55521773EDC00188E61 /* CustomPopAnimator.swift in Sources */,

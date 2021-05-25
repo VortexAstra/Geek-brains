@@ -20,7 +20,9 @@ class FriendsViewController: UIViewController {
     @IBOutlet weak var customControll: CustomControl!
     
     @IBOutlet weak var searchBar: CustomSearchBar!
-    
+
+    private let afServiceAdapter = AFServiceAdapter()
+    private var allFriends: [AdapterFriends] = []
     
     var searchActive = false
     
@@ -103,32 +105,11 @@ extension FriendsViewController {
     
     //MARK: - Network funcs
     private func getFriends() {
-    
-//        let sortProperties = [SortDescriptor(keyPath: "first_name", ascending: true), SortDescriptor(keyPath: "last_name", ascending: true)]
-        friends = RealmWorker.instance.getItems(VkFriend.self)?.sorted(byKeyPath: "first_name").sorted(byKeyPath: "last_name")
-        //sorted(by: { (first, second) -> Bool in
-//        return (first.first_name < second.first_name && first.last_name < second.last_name)
-//    })
-        notificationTokenGroups = friends?.observe { changes in
-            print("friendObserver is work")
-            switch changes {
-            case .initial( _)://let collection
-                self.migrateFriends()
-            case .update(_, _, _, _):
-                //(let collection, let deletions, let insertions, let modifications):
-                    self.migrateFriends()
-            case .error(let error):
-                print(error.localizedDescription)
-            }
-        }
-        AlamofireService.instance.getFriends(delegate: self)
+        afServiceAdapter.loadFriends { [weak self] allFriends in
+           guard let self = self else { return }
+           self.allFriends = allFriends
+         }
     }
-    
-    private func migrateFriends() {
-        setGroupedFriend()
-        tableView.reloadData()
-    }
-    
 }
 
 extension FriendsViewController {
