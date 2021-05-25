@@ -19,6 +19,9 @@ class NewsViewController: UIViewController {
     
     
     private var feeds = [VkFeed]()
+
+    private let newsFactory = FactoryVM()
+    private var newsVM: [VKFeedVM] = []
     
     var startFrom = ""
     private var needClearNews = true
@@ -92,12 +95,13 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feeds.count
+        return newsVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.configure(feed: feeds[indexPath.row])
+        let news = newsVM[indexPath.row]
+        cell.configure(feed: news)
         cell.delegate = self
         return cell
     }
@@ -110,7 +114,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == feeds.count - 2 && !isLoad {
+        if indexPath.row == newsVM.count - 2 && !isLoad {
             
             prepareGetFeeds(needClearNews: false)
         }
