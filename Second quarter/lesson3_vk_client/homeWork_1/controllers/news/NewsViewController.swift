@@ -95,13 +95,12 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsVM.count
+        return feeds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        let news = newsVM[indexPath.row]
-        cell.configure(feed: news)
+        cell.configure(feed: feeds[indexPath.row])
         cell.delegate = self
         return cell
     }
@@ -114,7 +113,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     open func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == newsVM.count - 2 && !isLoad {
+        if indexPath.row == feeds.count - 2 && !isLoad {
             
             prepareGetFeeds(needClearNews: false)
         }

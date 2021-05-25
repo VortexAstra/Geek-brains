@@ -108,7 +108,7 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     
-    func configure(feed: VKFeedVM) {
+    func configure(feed: VkFeed) {
         
 
         labelFeedGroupHeader.text = feed.sourceName
@@ -119,16 +119,26 @@ class NewsTableViewCell: UITableViewCell {
             labelText.pin.height(70)
         }
         
-        labelDate.text = feed.feedDate
-        labelFeedGroupHeader.text = feed.sourceName
+        labelDate.text = feed.getFeedDate()
         labelText.text = feed.feedText
-        labelLike.text = feed.countLikes
-        labelViews.text = feed.countViews
-        labelShare.text = feed.countReposts
-        labelComment.text = feed.countComments
+        labelLike.text = feed.getStringFrom(count: feed.countLikes)
+        labelViews.text = feed.getStringFrom(count: feed.countViews)
+        labelShare.text = feed.getStringFrom(count: feed.countReposts)
+        labelComment.text = feed.getStringFrom(count: feed.countComments)
         
         imageViewGroup.sd_setImage(with: URL(string: feed.sourceUrl), placeholderImage: UIImage(named: "noPhoto"))
-        
+
+        if feed.attachments.count > 0 {
+
+            let height = self.frame.width * CGFloat(feed.attachments[0].height) / CGFloat(feed.attachments[0].width)
+
+            imageNew.pin.height(height)
+
+            imageNew.sd_setImage(with: URL(string: feed.attachments[0].imageUrl), placeholderImage: UIImage(named: "noPhoto"))
+
+        } else {
+            imageNew.pin.height(0)
+        }
         
         setNeedsLayout()
         layoutIfNeeded()
