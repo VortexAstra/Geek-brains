@@ -38,6 +38,21 @@ protocol VkApiCommentsDelegate {
     func returnComments(_ comments: [VkComment])
 }
 
+// MARK: Proxy(LOGGER) :))
+class AFLogger {
+    static let shared = AFLogger()
+    private init(){}
+
+    func proxyRequest(_ url: URLConvertible,
+                 method: HTTPMethod = .get,
+                 parameters: Parameters? = nil,
+                 encoding: ParameterEncoding = URLEncoding.default,
+                 headers: HTTPHeaders? = nil) -> DataRequest {
+
+        print("Alamofire req")
+        return Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
+    }
+}
 
 class AlamofireService {
     
@@ -54,11 +69,12 @@ class AlamofireService {
             "fields": "id,nickname,photo_100,status",
             "v": "3.0",
             ]
-        
+
+        let proxyParser = VkResponseServer(vkResponseParser: VkResponseParser.instance)
+
         Alamofire.request(fullRow, method: .get, parameters: params)
             .responseJSON(queue: DispatchQueue.global(qos: .userInteractive)) { response in
-                let friends = VkResponseParser.instance
-                    .parseFriends(result: response.result)
+                let friends = proxyParser.parseFriends(result: response.result)
                 DispatchQueue.main.async {
                     delegate.returnFriends(friends)
                 }

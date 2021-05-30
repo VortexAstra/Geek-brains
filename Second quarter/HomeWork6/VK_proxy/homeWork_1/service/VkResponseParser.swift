@@ -11,7 +11,25 @@ import Alamofire
 import SwiftyJSON
 
 
-class VkResponseParser {
+protocol Parserable {
+    func parseFriends(result: Result<Any>) -> [VkFriend]
+}
+
+class VkResponseServer: Parserable {
+    let vkResponseParser: VkResponseParser
+
+    init(vkResponseParser: VkResponseParser) {
+        self.vkResponseParser = vkResponseParser
+    }
+
+    func parseFriends(result: Result<Any>) -> [VkFriend] {
+        print("$$$$$", result)
+        return vkResponseParser.parseFriends(result: result)
+    }
+
+}
+
+class VkResponseParser: Parserable {
     
     static let instance = VkResponseParser()
     private init(){}
