@@ -23,7 +23,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
     self.navigationItem.title = @"Main Screen";
     [self cofigureTableview];
     self.content = @[ @"Monday", @"Tuesday", @"Wednesday",@"Thursday",@"Friday",@"Saturday",@"Sunday"];
-
 }
 
 ///table to display data in the future in the application
@@ -33,6 +32,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.translatesAutoresizingMaskIntoConstraints = false;
+    _tableView.tableFooterView = [UIView new];
     _tableView.rowHeight = 50;
     [self.view addSubview:_tableView];
 
