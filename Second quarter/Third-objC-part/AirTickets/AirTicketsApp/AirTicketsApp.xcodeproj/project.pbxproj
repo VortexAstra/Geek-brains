@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77030E5A26A334A700FAA25F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77030E5926A334A700FAA25F /* AppDelegate.m */; };
+		77030E5D26A334A700FAA25F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77030E5C26A334A700FAA25F /* SceneDelegate.m */; };
+		77030E6026A334A700FAA25F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77030E5F26A334A700FAA25F /* ViewController.m */; };
+		77030E6626A334A700FAA25F /* AirTicketsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77030E6426A334A700FAA25F /* AirTicketsApp.xcdatamodeld */; };
+		77030E6826A334A900FAA25F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77030E6726A334A900FAA25F /* Assets.xcassets */; };
+		77030E6B26A334A900FAA25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77030E6926A334A900FAA25F /* LaunchScreen.storyboard */; };
+		77030E6E26A334A900FAA25F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77030E6D26A334A900FAA25F /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77030E5526A334A700FAA25F /* AirTicketsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTicketsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77030E5826A334A700FAA25F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77030E5926A334A700FAA25F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77030E5B26A334A700FAA25F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		77030E5C26A334A700FAA25F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		77030E5E26A334A700FAA25F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77030E5F26A334A700FAA25F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77030E6526A334A700FAA25F /* AirTicketsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AirTicketsApp.xcdatamodel; sourceTree = "<group>"; };
+		77030E6726A334A900FAA25F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77030E6A26A334A900FAA25F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77030E6C26A334A900FAA25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77030E6D26A334A900FAA25F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77030E5226A334A700FAA25F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77030E4C26A334A700FAA25F = {
+			isa = PBXGroup;
+			children = (
+				77030E5726A334A700FAA25F /* AirTicketsApp */,
+				77030E5626A334A700FAA25F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77030E5626A334A700FAA25F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77030E5526A334A700FAA25F /* AirTicketsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77030E5726A334A700FAA25F /* AirTicketsApp */ = {
+			isa = PBXGroup;
+			children = (
+				77FB997726A6209900DF1965 /* AppSupportFiles */,
+				77FB997526A6209000DF1965 /* Flow */,
+				77030E6C26A334A900FAA25F /* Info.plist */,
+				77030E6D26A334A900FAA25F /* main.m */,
+				77030E6426A334A700FAA25F /* AirTicketsApp.xcdatamodeld */,
+			);
+			path = AirTicketsApp;
+			sourceTree = "<group>";
+		};
+		77FB997526A6209000DF1965 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				77FB997926A620B500DF1965 /* MainScreen */,
+				77FB997826A620AD00DF1965 /* Utils */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		77FB997726A6209900DF1965 /* AppSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				77030E5826A334A700FAA25F /* AppDelegate.h */,
+				77030E5926A334A700FAA25F /* AppDelegate.m */,
+				77030E5B26A334A700FAA25F /* SceneDelegate.h */,
+				77030E5C26A334A700FAA25F /* SceneDelegate.m */,
+			);
+			path = AppSupportFiles;
+			sourceTree = "<group>";
+		};
+		77FB997826A620AD00DF1965 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77030E6726A334A900FAA25F /* Assets.xcassets */,
+				77030E6926A334A900FAA25F /* LaunchScreen.storyboard */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		77FB997926A620B500DF1965 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77FB997C26A620FA00DF1965 /* Model */,
+				77FB997B26A620F600DF1965 /* View */,
+				77FB997A26A620F000DF1965 /* Controllers */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		77FB997A26A620F000DF1965 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77030E5E26A334A700FAA25F /* ViewController.h */,
+				77030E5F26A334A700FAA25F /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77FB997B26A620F600DF1965 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77FB997C26A620FA00DF1965 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77030E5426A334A700FAA25F /* AirTicketsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77030E7126A334A900FAA25F /* Build configuration list for PBXNativeTarget "AirTicketsApp" */;
+			buildPhases = (
+				77030E5126A334A700FAA25F /* Sources */,
+				77030E5226A334A700FAA25F /* Frameworks */,
+				77030E5326A334A700FAA25F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirTicketsApp;
+			productName = AirTicketsApp;
+			productReference = 77030E5526A334A700FAA25F /* AirTicketsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77030E4D26A334A700FAA25F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					77030E5426A334A700FAA25F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 77030E5026A334A700FAA25F /* Build configuration list for PBXProject "AirTicketsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77030E4C26A334A700FAA25F;
+			productRefGroup = 77030E5626A334A700FAA25F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77030E5426A334A700FAA25F /* AirTicketsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77030E5326A334A700FAA25F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77030E6B26A334A900FAA25F /* LaunchScreen.storyboard in Resources */,
+				77030E6826A334A900FAA25F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77030E5126A334A700FAA25F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77030E6E26A334A900FAA25F /* main.m in Sources */,
+				77030E6026A334A700FAA25F /* ViewController.m in Sources */,
+				77030E5A26A334A700FAA25F /* AppDelegate.m in Sources */,
+				77030E6626A334A700FAA25F /* AirTicketsApp.xcdatamodeld in Sources */,
+				77030E5D26A334A700FAA25F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77030E6926A334A900FAA25F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77030E6A26A334A900FAA25F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77030E6F26A334A900FAA25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		77030E7026A334A900FAA25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77030E7226A334A900FAA25F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = AirTicketsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.AirTicketsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		77030E7326A334A900FAA25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = AirTicketsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.AirTicketsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77030E5026A334A700FAA25F /* Build configuration list for PBXProject "AirTicketsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77030E6F26A334A900FAA25F /* Debug */,
+				77030E7026A334A900FAA25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77030E7126A334A900FAA25F /* Build configuration list for PBXNativeTarget "AirTicketsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77030E7226A334A900FAA25F /* Debug */,
+				77030E7326A334A900FAA25F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77030E6426A334A700FAA25F /* AirTicketsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77030E6526A334A700FAA25F /* AirTicketsApp.xcdatamodel */,
+			);
+			currentVersion = 77030E6526A334A700FAA25F /* AirTicketsApp.xcdatamodel */;
+			path = AirTicketsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 77030E4D26A334A700FAA25F /* Project object */;
+}
