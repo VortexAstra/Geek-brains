@@ -13,7 +13,26 @@
 		77E1B3E926CD21A900E03B79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1B3E726CD21A900E03B79 /* Main.storyboard */; };
 		77E1B3EB26CD21AB00E03B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E1B3EA26CD21AB00E03B79 /* Assets.xcassets */; };
 		77E1B3EE26CD21AB00E03B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E1B3EC26CD21AB00E03B79 /* LaunchScreen.storyboard */; };
+		77E1B40526CD230900E03B79 /* ClearCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1B40426CD230900E03B79 /* ClearCodeUITests.swift */; };
+		77E1B41326CD231000E03B79 /* ClearCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E1B41226CD231000E03B79 /* ClearCodeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77E1B40726CD230900E03B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77E1B3D626CD21A900E03B79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77E1B3DD26CD21A900E03B79;
+			remoteInfo = ClearCode;
+		};
+		77E1B41526CD231000E03B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77E1B3D626CD21A900E03B79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77E1B3DD26CD21A900E03B79;
+			remoteInfo = ClearCode;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		77E1B3DE26CD21A900E03B79 /* ClearCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +43,30 @@
 		77E1B3EA26CD21AB00E03B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E1B3ED26CD21AB00E03B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77E1B3EF26CD21AB00E03B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E1B40226CD230900E03B79 /* ClearCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E1B40426CD230900E03B79 /* ClearCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCodeUITests.swift; sourceTree = "<group>"; };
+		77E1B40626CD230900E03B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E1B41026CD231000E03B79 /* ClearCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E1B41226CD231000E03B79 /* ClearCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCodeTests.swift; sourceTree = "<group>"; };
+		77E1B41426CD231000E03B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		77E1B3DB26CD21A900E03B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1B3FF26CD230900E03B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1B40D26CD231000E03B79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				77E1B3E026CD21A900E03B79 /* ClearCode */,
+				77E1B40326CD230900E03B79 /* ClearCodeUITests */,
+				77E1B41126CD231000E03B79 /* ClearCodeTests */,
 				77E1B3DF26CD21A900E03B79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				77E1B3DE26CD21A900E03B79 /* ClearCode.app */,
+				77E1B40226CD230900E03B79 /* ClearCodeUITests.xctest */,
+				77E1B41026CD231000E03B79 /* ClearCodeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +99,105 @@
 		77E1B3E026CD21A900E03B79 /* ClearCode */ = {
 			isa = PBXGroup;
 			children = (
-				77E1B3E126CD21A900E03B79 /* AppDelegate.swift */,
-				77E1B3E326CD21A900E03B79 /* SceneDelegate.swift */,
-				77E1B3E526CD21A900E03B79 /* ViewController.swift */,
-				77E1B3E726CD21A900E03B79 /* Main.storyboard */,
-				77E1B3EA26CD21AB00E03B79 /* Assets.xcassets */,
-				77E1B3EC26CD21AB00E03B79 /* LaunchScreen.storyboard */,
-				77E1B3EF26CD21AB00E03B79 /* Info.plist */,
+				77E1B3F926CD22BE00E03B79 /* App */,
+				77E1B3F826CD22B200E03B79 /* Supporting Files */,
+				77E1B3F626CD229A00E03B79 /* Resources */,
+				77E1B3F526CD227300E03B79 /* Core */,
+				77E1B3FD26CD22E800E03B79 /* Environments */,
 			);
 			path = ClearCode;
+			sourceTree = "<group>";
+		};
+		77E1B3F526CD227300E03B79 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		77E1B3F626CD229A00E03B79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B3EC26CD21AB00E03B79 /* LaunchScreen.storyboard */,
+				77E1B3EA26CD21AB00E03B79 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77E1B3F726CD22AF00E03B79 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B3E526CD21A900E03B79 /* ViewController.swift */,
+				77E1B3E726CD21A900E03B79 /* Main.storyboard */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		77E1B3F826CD22B200E03B79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77E1B3F926CD22BE00E03B79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B3E126CD21A900E03B79 /* AppDelegate.swift */,
+				77E1B3E326CD21A900E03B79 /* SceneDelegate.swift */,
+				77E1B3FC26CD22D500E03B79 /* BussnessLogic */,
+				77E1B3FB26CD22CE00E03B79 /* Model */,
+				77E1B3FA26CD22C200E03B79 /* Assembly */,
+				77E1B3F726CD22AF00E03B79 /* Flow */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		77E1B3FA26CD22C200E03B79 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		77E1B3FB26CD22CE00E03B79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77E1B3FC26CD22D500E03B79 /* BussnessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BussnessLogic;
+			sourceTree = "<group>";
+		};
+		77E1B3FD26CD22E800E03B79 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B3EF26CD21AB00E03B79 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		77E1B40326CD230900E03B79 /* ClearCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B40426CD230900E03B79 /* ClearCodeUITests.swift */,
+				77E1B40626CD230900E03B79 /* Info.plist */,
+			);
+			path = ClearCodeUITests;
+			sourceTree = "<group>";
+		};
+		77E1B41126CD231000E03B79 /* ClearCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				77E1B41226CD231000E03B79 /* ClearCodeTests.swift */,
+				77E1B41426CD231000E03B79 /* Info.plist */,
+			);
+			path = ClearCodeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +220,42 @@
 			productReference = 77E1B3DE26CD21A900E03B79 /* ClearCode.app */;
 			productType = "com.apple.product-type.application";
 		};
+		77E1B40126CD230900E03B79 /* ClearCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E1B40926CD230900E03B79 /* Build configuration list for PBXNativeTarget "ClearCodeUITests" */;
+			buildPhases = (
+				77E1B3FE26CD230900E03B79 /* Sources */,
+				77E1B3FF26CD230900E03B79 /* Frameworks */,
+				77E1B40026CD230900E03B79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77E1B40826CD230900E03B79 /* PBXTargetDependency */,
+			);
+			name = ClearCodeUITests;
+			productName = ClearCodeUITests;
+			productReference = 77E1B40226CD230900E03B79 /* ClearCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		77E1B40F26CD231000E03B79 /* ClearCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77E1B41726CD231000E03B79 /* Build configuration list for PBXNativeTarget "ClearCodeTests" */;
+			buildPhases = (
+				77E1B40C26CD231000E03B79 /* Sources */,
+				77E1B40D26CD231000E03B79 /* Frameworks */,
+				77E1B40E26CD231000E03B79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77E1B41626CD231000E03B79 /* PBXTargetDependency */,
+			);
+			name = ClearCodeTests;
+			productName = ClearCodeTests;
+			productReference = 77E1B41026CD231000E03B79 /* ClearCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +267,14 @@
 				TargetAttributes = {
 					77E1B3DD26CD21A900E03B79 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					77E1B40126CD230900E03B79 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 77E1B3DD26CD21A900E03B79;
+					};
+					77E1B40F26CD231000E03B79 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 77E1B3DD26CD21A900E03B79;
 					};
 				};
 			};
@@ -115,6 +292,8 @@
 			projectRoot = "";
 			targets = (
 				77E1B3DD26CD21A900E03B79 /* ClearCode */,
+				77E1B40126CD230900E03B79 /* ClearCodeUITests */,
+				77E1B40F26CD231000E03B79 /* ClearCodeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +306,20 @@
 				77E1B3EE26CD21AB00E03B79 /* LaunchScreen.storyboard in Resources */,
 				77E1B3EB26CD21AB00E03B79 /* Assets.xcassets in Resources */,
 				77E1B3E926CD21A900E03B79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1B40026CD230900E03B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1B40E26CD231000E03B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +336,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77E1B3FE26CD230900E03B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E1B40526CD230900E03B79 /* ClearCodeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77E1B40C26CD231000E03B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E1B41326CD231000E03B79 /* ClearCodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77E1B40826CD230900E03B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77E1B3DD26CD21A900E03B79 /* ClearCode */;
+			targetProxy = 77E1B40726CD230900E03B79 /* PBXContainerItemProxy */;
+		};
+		77E1B41626CD231000E03B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77E1B3DD26CD21A900E03B79 /* ClearCode */;
+			targetProxy = 77E1B41526CD231000E03B79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		77E1B3E726CD21A900E03B79 /* Main.storyboard */ = {
@@ -288,7 +510,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AGMRUUR65;
-				INFOPLIST_FILE = ClearCode/Info.plist;
+				INFOPLIST_FILE = ClearCode/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AGMRUUR65;
-				INFOPLIST_FILE = ClearCode/Info.plist;
+				INFOPLIST_FILE = ClearCode/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +538,84 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		77E1B40A26CD230900E03B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = ClearCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.ClearCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClearCode;
+			};
+			name = Debug;
+		};
+		77E1B40B26CD230900E03B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = ClearCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.ClearCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClearCode;
+			};
+			name = Release;
+		};
+		77E1B41826CD231000E03B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = ClearCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.ClearCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClearCode.app/ClearCode";
+			};
+			name = Debug;
+		};
+		77E1B41926CD231000E03B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AGMRUUR65;
+				INFOPLIST_FILE = ClearCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = astra.com.ClearCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClearCode.app/ClearCode";
 			};
 			name = Release;
 		};
@@ -336,6 +636,24 @@
 			buildConfigurations = (
 				77E1B3F326CD21AB00E03B79 /* Debug */,
 				77E1B3F426CD21AB00E03B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E1B40926CD230900E03B79 /* Build configuration list for PBXNativeTarget "ClearCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E1B40A26CD230900E03B79 /* Debug */,
+				77E1B40B26CD230900E03B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77E1B41726CD231000E03B79 /* Build configuration list for PBXNativeTarget "ClearCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E1B41826CD231000E03B79 /* Debug */,
+				77E1B41926CD231000E03B79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
