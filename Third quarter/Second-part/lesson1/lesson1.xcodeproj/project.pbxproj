@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77960154271231C2003FB2F9 /* map-style.json in Resources */ = {isa = PBXBuildFile; fileRef = 77960153271231C2003FB2F9 /* map-style.json */; };
 		77BD22E92710D0DE00CF5F92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD22E82710D0DE00CF5F92 /* AppDelegate.swift */; };
 		77BD22EB2710D0DE00CF5F92 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD22EA2710D0DE00CF5F92 /* SceneDelegate.swift */; };
 		77BD22ED2710D0DE00CF5F92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD22EC2710D0DE00CF5F92 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		5066413F104721921D441B4D /* Pods-lesson1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lesson1.debug.xcconfig"; path = "Target Support Files/Pods-lesson1/Pods-lesson1.debug.xcconfig"; sourceTree = "<group>"; };
 		64AC26A8749D39856BC81669 /* Pods_lesson1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lesson1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77960153271231C2003FB2F9 /* map-style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "map-style.json"; sourceTree = SOURCE_ROOT; };
 		77BD22E52710D0DE00CF5F92 /* lesson1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BD22E82710D0DE00CF5F92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77BD22EA2710D0DE00CF5F92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 				5066413F104721921D441B4D /* Pods-lesson1.debug.xcconfig */,
 				CCBB747815B70C0B7A7B1A31 /* Pods-lesson1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				77BD22E82710D0DE00CF5F92 /* AppDelegate.swift */,
 				77BD22EA2710D0DE00CF5F92 /* SceneDelegate.swift */,
 				77BD22EC2710D0DE00CF5F92 /* ViewController.swift */,
+				77960153271231C2003FB2F9 /* map-style.json */,
 				77BD22EE2710D0DE00CF5F92 /* Main.storyboard */,
 				77BD22F12710D0E000CF5F92 /* Assets.xcassets */,
 				77BD22F32710D0E000CF5F92 /* LaunchScreen.storyboard */,
@@ -154,6 +156,7 @@
 			files = (
 				77BD22F52710D0E000CF5F92 /* LaunchScreen.storyboard in Resources */,
 				77BD22F22710D0E000CF5F92 /* Assets.xcassets in Resources */,
+				77960154271231C2003FB2F9 /* map-style.json in Resources */,
 				77BD22F02710D0DE00CF5F92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
