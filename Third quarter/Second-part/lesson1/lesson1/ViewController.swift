@@ -13,13 +13,15 @@ final class ViewController: UIViewController {
 
 //  MARK: - IB
     @IBOutlet private weak var mapView: GMSMapView!
-
+    
     @IBAction private func isTrackingButton(_ button: UIBarButtonItem) {
         if isTracking {
             locationManager.stopUpdatingLocation()
+            button.title = "Tracking"
             isTracking = false
         } else {
             locationManager.startUpdatingLocation()
+            button.title = "Stop Tracking"
             isTracking = true
             startNewTrack()
         }
@@ -97,10 +99,9 @@ extension ViewController: GMSMapViewDelegate {
 
 //  MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
-
+//  TODO: save data in realm/core data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
-        print("locations.last", locations.last as Any)
         mapView.animate(to: GMSCameraPosition.camera(withTarget: lastLocation.coordinate, zoom: 17))
         addPointToTrack(coordinate: lastLocation.coordinate)
     }
