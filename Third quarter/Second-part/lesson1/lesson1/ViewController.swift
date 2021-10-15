@@ -13,15 +13,26 @@ final class ViewController: UIViewController {
 
 //  MARK: - IB
     @IBOutlet private weak var mapView: GMSMapView!
-
+    
     @IBAction private func isTrackingButton(_ button: UIBarButtonItem) {
-        locationManager.startUpdatingLocation()
+        if isTracking {
+            locationManager.stopUpdatingLocation()
+            button.title = "Tracking"
+            isTracking = false
+        } else {
+            locationManager.startUpdatingLocation()
+            button.title = "Stop Tracking"
+            isTracking = true
+            startNewTrack()
+        }
     }
 
 //  MARK: - PROPERTY
     private let locationManager = CLLocationManager()
     private lazy var coordinate = CLLocationCoordinate2D(latitude: 55.753215, longitude: 37.622504)
     private lazy var camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 17)
+    private var route: GMSPolyline?
+    private var path: GMSMutablePath?
 
     private var isTracking = false
 
@@ -45,16 +56,12 @@ private extension ViewController {
     }
 
     func setupLocationManager() {
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.startMonitoringSignificantLocationChanges()
         locationManager.delegate = self
-    }
-
-    func addMarker(to coordination: CLLocationCoordinate2D) {
-        let marker = GMSMarker(position: coordination)
-        marker.icon = GMSMarker.markerImage(with: nil)
-        marker.title = "Custom title"
-        marker.map = mapView
     }
 
     func applyCustomStyle() {
@@ -66,6 +73,21 @@ private extension ViewController {
     }
 }
 
+private extension ViewController {
+    func startNewTrack() {
+        route?.map = mapView
+        route = GMSPolyline()
+        route?.strokeColor = .red
+        route?.strokeWidth = 4
+        path = GMSMutablePath()
+        route?.map = mapView
+    }
+
+    func addPointToTrack(coordinate: CLLocationCoordinate2D) {
+        path?.add(coordinate)
+        route?.path = path
+    }
+}
 
 //  MARK: - GMSMapViewDelegate
 extension ViewController: GMSMapViewDelegate {
@@ -77,10 +99,10 @@ extension ViewController: GMSMapViewDelegate {
 
 //  MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
-
+//  TODO: save data in realm/core data
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
         mapView.animate(to: GMSCameraPosition.camera(withTarget: lastLocation.coordinate, zoom: 17))
-        addMarker(to: lastLocation.coordinate)
+        addPointToTrack(coordinate: lastLocation.coordinate)
     }
 }
